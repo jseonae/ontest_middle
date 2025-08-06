@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온평가 > 문제은행 > 상세편집</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/question_ind.css">
+    <link rel="stylesheet" href="/css/contents.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="text/javascript" src="/js/include.js"></script>
+    <script type="text/javascript" src="/js/contents.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+<!--[include]HEADER :: Start -->
+<div id="header"></div>
+<!--[include]HEADER :: End -->
+
+<main id="container" class="sub">
+    <section class="sub_header">
+        <div class="login_info">
+            <div class="info_item">
+                <i class="sicon ico1"></i><span class="name"><b>김평가</b>선생님</span>
+                <span class="scoolname">충남초등학교</span>
+            </div>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+
+        <div id="location">
+            <a href="#" class="item home"><span>홈</span></a>
+            <a href="#" class="item">문제은행</a>
+            <a href="#" class="item">생성하기</a>
+        </div>
+
+        <div class="sub_title">
+            <h1>상세편집</h1>
+            <p>생성한 평가지를 미리보고 확인합니다.</p>
+        </div>
+    </section><!--//sub_header-->
+
+    <section id="content" class="prev_wrap">
+        <div class="layout">
+            <div class="prev_info">
+                <div class="info_box">
+                    <div class="text_box">
+                        <strong class="totla__title"><b>5</b>학년 <b>1</b>학기 <b>영어(동아)</b></strong>
+                        <span><em>총 문제수</em><b>25</b>문제</span>
+                        <ul>
+                            <li>선택형 19</li>
+                            <li>서답형 6</li>
+                        </ul>
+                    </div>
+                    <div class="graph_wrap">
+                        <div class="infoChart_wrap"><canvas id="infoChart"></canvas></div>
+                        <ul>
+                            <li>상</li>
+                            <li>중</li>
+                            <li>하</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info_list">
+                    <div class="title_box">
+                        <strong class="subtitle">
+                            <i class="hico hico1"></i>
+                            문제목록
+                        </strong>
+                        <button type="submit" class="btn btn-ani btn-quaternary" onclick="modalOpen('popup_opne');"><i class="sicon ico3"></i>선택삭제</button>
+                    </div>
+                   
+                    <div class="table_wrap">
+                        <table class="tbl_basic center table-hover">
+                            <caption>문제 목록</caption>
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:40%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" id="allcheck" name="check"/><label for="allcheck"></label></th>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">평가내용</th>
+                                    <th scope="col">난이도</th>
+                                    <th scope="col">배점</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check0" name="check"/><label for="check0"></label></th>
+                                    <td>1</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check1" name="check"/><label for="check1"></label></th>
+                                    <td>2</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check2" name="check"/><label for="check2"></label></th>
+                                    <td>3</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check3" name="check"/><label for="check3"></label></th>
+                                    <td>4</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check4" name="check"/><label for="check4"></label></th>
+                                    <td>5</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check5" name="check"/><label for="check5"></label></th>
+                                    <td>6</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check6" name="check"/><label for="check6"></label></th>
+                                    <td>7</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check7" name="check"/><label for="check7"></label></th>
+                                    <td>8</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check8" name="check"/><label for="check8"></label></th>
+                                    <td>9</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check9" name="check"/><label for="check9"></label></th>
+                                    <td>10</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check10" name="check"/><label for="check10"></label></th>
+                                    <td>11</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check11" name="check"/><label for="check11"></label></th>
+                                    <td>12</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check12" name="check"/><label for="check12"></label></th>
+                                    <td>13</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check13" name="check"/><label for="check13"></label></th>
+                                    <td>14</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check14" name="check"/><label for="check14"></label></th>
+                                    <td>15</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check15" name="check"/><label for="check15"></label></th>
+                                    <td>16</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check16" name="check"/><label for="check16"></label></th>
+                                    <td>17</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check17" name="check"/><label for="check17"></label></th>
+                                    <td>18</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check18" name="check"/><label for="check18"></label></th>
+                                    <td>19</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" id="check19" name="check"/><label for="check19"></label></th>
+                                    <td>20</td>
+                                    <td>대화의 특성 파악</td>
+                                    <td>중</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>  
+                    </div>
+                </div>
+            </div>
+            <div class="prev_box">
+                <div class="title_box">
+                    <strong class="subtitle2">미리보기</strong>
+                    <!-- <div class="select_wrap">
+                        <select class="select">
+                                <option selected>문제유형 오름차순</option>
+                                <option value="">문제유형 내림차순</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="prev_list">
+                    <div class="prev__item">
+                        <div class="q_content">
+                            <h4 class="q_tit">
+                               <em class="question_number">1번</em>
+                               <span class="txt">가방의 수에 따른 국어책의 수와 수학책의 수를 나눗셈으로 비교하려고 합니다. 알맞은 말을 골라 ○표 하세요.</span> 
+                            </h4>
+                            <div class="q_layout">
+                                <div class="q_wrap">
+                                    <table class="tbl_basic type3 center">
+                                        <caption>개요</caption>
+                                        <colgroup>
+                                            <col style="width:10%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">가방 수(개)</th>
+                                                <th scope="col">1</th>
+                                                <th scope="col">2</th>
+                                                <th scope="col">3</th>
+                                                <th scope="col">4</th>
+                                                <th scope="col">5</th>
+                                                <th scope="col">…</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">국어책 수(권)</th>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>…</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">수학책 수(권)</th>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>…</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="a_wrap">
+                                    <div class="hsradioWrap" style="text-align:center;">
+                                        <span>가방 수에 따라 국어책의 수와 수학책의 수의 비가</span>
+                                        <input type="radio" class="hotspot" name="example" id="example1">
+                                        <label for="example1">변합니다.</label>
+                                        <input type="radio" class="hotspot" name="example" id="example2">
+                                        <label for="example2">변하지 않습니다.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="btn_group">
+                            <li>
+                                <i class="state tx">선택형</i>
+                                <i class="state tx diff1">상</i>
+                                <span class="state tx gr">수와 연산</span>
+                            </li>
+                            <li>
+                                <button type="submit" class="sicon ico6">삭제</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="prev__item">
+                        <div class="q_content">
+                            <h4 class="q_tit">
+                               <em class="question_number">1번</em>
+                               <span class="txt">가방의 수에 따른 국어책의 수와 수학책의 수를 나눗셈으로 비교하려고 합니다. 알맞은 말을 골라 ○표 하세요.</span> 
+                            </h4>
+                            <div class="q_layout">
+                                <div class="q_wrap">
+                                    <table class="tbl_basic type3 center">
+                                        <caption>개요</caption>
+                                        <colgroup>
+                                            <col style="width:10%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                            <col style="width:5%"/>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">가방 수(개)</th>
+                                                <th scope="col">1</th>
+                                                <th scope="col">2</th>
+                                                <th scope="col">3</th>
+                                                <th scope="col">4</th>
+                                                <th scope="col">5</th>
+                                                <th scope="col">…</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">국어책 수(권)</th>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>…</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">수학책 수(권)</th>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>…</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="a_wrap">
+                                    <div class="hsradioWrap" style="text-align:center;">
+                                        <span>가방 수에 따라 국어책의 수와 수학책의 수의 비가</span>
+                                        <input type="radio" class="hotspot" name="example" id="example1">
+                                        <label for="example1">변합니다.</label>
+                                        <input type="radio" class="hotspot" name="example" id="example2">
+                                        <label for="example2">변하지 않습니다.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="btn_group">
+                            <li>
+                                <i class="state tx">선택형</i>
+                                <i class="state tx diff1">상</i>
+                                <span class="state tx gr">수와 연산</span>
+                            </li>
+                            <li>
+                                <button type="submit" class="sicon ico6">삭제</button>
+                            </li>
+                        </ul>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        <div class="btn_group">
+            <a href="/sub0201.html" class="btn btn-ani btn-secondary lg">이전으로</a>
+            <a href="/sub0203.html" class="btn btn-ani btn-primary lg">문제저장</a>
+        </div>
+    </section>
+
+
+    <!--삭제 안내팝업-->
+    <div class="modal type2 modal-popup answerPop" id="popup_opne">
+        <div class="modal-background is-click-disabled"></div>
+        <div class="modal-content">
+            <div class="popup-wrap">
+                <div class="con-head">
+                    <h3>선택한 문항을 삭제 하시겠습니까?</h3>
+                </div>
+                <div class="con-wrap">
+                    <ul class="delete_box">
+                        <li>문항번호 : 1</li>
+                        <li>평가내용 : 대화의 특성파악</li>
+                        <li>난이도 : 중</li>
+                        <li>배점 : 4</li>
+                    </ul>
+                    <div class="btn_group">
+                        <a class="btn btn-ani btn-secondary" onclick="modalClose('popup_opne');">취소</a>
+                        <a class="btn btn-ani btn-primary" onclick="modalClose('popup_opne');">삭제</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--//삭제 안내팝업-->
+
+
+<!--[include]HEADER :: Start -->
+<div id="footer"></div>
+<!--[include]HEADER :: End -->
+
+</main>
+
+</div>
+
+<script>
+var ctx = document.getElementById('infoChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['상','중','하'],
+            datasets: [{
+                backgroundColor: [
+                    'rgb(255, 86, 86)',
+                    'rgb(0, 211, 171)',
+                    'rgb(255, 184, 62)',
+                    ],
+                barThickness: 40, //그래프 굵기
+                borderRadius: 6, // 그래프 둥글기
+                borderSkipped: false, //그래프 둥글기 아래부분 나오게
+                data:[2, 10, 5],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+                tooltip: { enabled: false}, // 툴팁 숨김
+            },
+            scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false
+                },
+            }
+        }        
+    });
+</script>
+
+
+</body>
+</html>

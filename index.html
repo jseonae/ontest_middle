@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>온평가</title>
+
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+    </head>
+
+<body>
+<main id="main">
+    <div class="wrap">
+        <a class="btn signBtn" href="/account/agreement.html">회원가입</a>
+        <div class="mcon">
+            <h1 class="title">
+                <span>출발선이 평등한 행복한 충남교육</span>
+                <span><em>컴퓨터 기반</em> 평가 문제은행</span>
+                <img src="../images/main/logo_main.svg" alt="온평가 로고">
+            </h1>
+            <ul class="btn_group">
+                <li>
+                    <a class="btn login teacher" onclick="modalOpen('popup_teacher');">
+                        <span>
+                            <span class="first_word" data-hover="선생님">선생님</span>
+                            <span class="second_word" data-hover="로그인">로그인</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn login student" onclick="modalOpen('popup_student');">
+                        <span>
+                            <span class="first_word" data-hover="학생">학생</span>
+                            <span class="second_word" data-hover="로그인">로그인</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="obj_group">
+            <span id="lottie2" class="lottie mobj02"></span>
+            <span id="lottie1" class="lottie mobj01"></span>
+            <span class="obj num1"></span>
+            <span class="obj num2"></span>
+            <span class="obj num3"></span>
+            <span class="obj num5"></span>
+            <span class="obj num6">
+                <i class="shape num1"></i>
+                <i class="shape num2"></i>
+                <i class="shape num3"></i>
+            </span>
+            <span class="obj num7"></span>
+            <span class="obj num8"></span>
+            <span class="obj num9"></span>
+            <span class="obj num10"></span>
+            <span class="obj objBg"></span>
+        </div>
+    </div>
+
+    <div class="bg_group">
+        <span class="purple num1"></span>
+        <span class="purple num2"></span>
+        <span class="wave num1"></span>
+        <span class="wave num2"></span>
+    </div>
+</main>
+
+<footer>
+    <img src="../images/main/cne_logo.svg" alt="충청남도교육청교육과정평가정보원 로고">
+    <span>Copyright ⓒ 2024 edus충남. All Rights Reserved.</span>
+</footer>
+
+<!--선생님 로그인 팝업-->
+<div class="modal modal-popup main_modal" id="popup_teacher">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content">
+        <button type="button" class="btn btn-ani btn-secondary modal-close" onclick="modalClose('popup_teacher');">닫기</button>
+        <div class="popup-wrap">
+            <div class="con-head">
+                <h3>선생님 로그인</h3>
+            </div>
+            <div class="con-wrap">
+                <ul class="login_input">
+                    <li><input type="text" placeholder="아이디를 입력해주세요."></li>
+                    <li><input type="password" placeholder="비밀번호를 입력해주세요."></li>
+                </ul>
+                <div class="login_alert"><i class="sicon ico7"></i><span class="txt">아이디 또는 비밀번호가 일치하지 않습니다.</span></div>
+                <div class="btn_group">
+                    <a class="btn btn-ani btn-primary" href="/sub0101.html">로그인</a>
+                    <a class="btn btn-ani btn-outline-primary" href="#" target="_blank">인증서 로그인</a>
+                    <a class="btn btn-ani btn-blank" href="#" target="_blank">아이디 / 비밀번호 찾기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--학생 로그인 팝업-->
+<div class="modal modal-popup main_modal" id="popup_student">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content">
+        <button type="button" class="btn btn-ani btn-secondary modal-close" onclick="modalClose('popup_student');">닫기</button>
+        <div class="popup-wrap">
+            <div class="con-head">
+                <h3>학생 로그인</h3>
+            </div>
+            <div class="con-wrap">
+                <ul class="login_input">
+                    <li><input type="text" placeholder="학급코드를 입력하세요"></li>
+                    <li><input type="text" placeholder="학급번호를 입력하세요."></li>
+                </ul>
+                <div class="login_alert"><i class="sicon ico7"></i><span class="txt">학급코드 또는 학생번호가 일치하지 않습니다.</span></div>
+                <div class="btn_group">
+                    <a class="btn btn-ani btn-primary" onclick="modalOpen('popup_loading');">시작하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--학생 로그인 로딩 팝업-->
+<div class="modal modal-popup main_modal" id="popup_loading">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content">
+        <div class="popup-wrap">
+            <span class="flag"><span>1단원</span></span>
+            <div class="con-head">
+                <h3><i class="micon ico2"></i>5학년 1학기</h3>
+            </div>
+            <div class="con-wrap">
+                <div class="loading">
+                    <div class="droplet_spinner">
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                    </div>
+                    <span><em>모두 접속</em>할 때까지 기다려주세요.</span>
+                </div>                
+                <ul class="test_info">
+                    <li class="subject">
+                        <i></i>
+                        <span>국어</span>
+                    </li>
+                    <li class="time">
+                        <i></i>
+                        <span>40분</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //남학생
+    var animation1 = bodymovin.loadAnimation({ 
+        container: document.getElementById('lottie1'),
+        path: '/images/main/mobj01.json',
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+    });
+    //여학생
+    var animation2 = bodymovin.loadAnimation({ 
+        container: document.getElementById('lottie2'),
+        path: '/images/main/mobj02.json',
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+    });
+
+
+    //모달팝업 열기
+    function modalOpen(modal_id){
+        $('.modal' + '#' + modal_id).addClass("active");
+        $('body').addClass('open');
+    }
+    //모달팝업 닫기
+    function modalClose(modal_id){
+        $('.modal' + '#' + modal_id).removeClass("active");
+        $("body").removeClass("open").removeAttr("style");
+    }
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온평가 진행중</title>
+
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/question_ind.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/js/include.js"></script>
+    <script type="text/javascript" src="/js/contents.js"></script>
+
+    <!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({            
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    수식관련 스크립트 현재 사용X -->
+</head>
+
+<body>
+
+<!--[include]HEADER :: Start -->
+<div id="question_header"></div>
+<!--[include]HEADER :: End -->
+
+
+    <div class="q_content">
+        <h4 class="q_tit">
+            <em class="question_number">1번</em>
+            <div class="txt">가방의 수에 따른 국어책의 수와 수학책의 수를 나눗셈으로 비교하려고 합니다. 알맞은 말을 고르세요.</div> 
+        </h4>
+        <div class="q_layout">
+            <div class="q_wrap">
+               
+            </div><!--예문-->
+            <div class="a_wrap">
+
+            </div><!--보기-->
+        </div>
+    </div>
+
+
+<!--제출팝업 :: 미답변 있을때-->
+<div class="modal modal-popup question_modal" id="popup_opne">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content">
+        <div class="popup-wrap">
+            <span class="flag"><span>1단원</span></span>
+            <div class="con-head">
+                <h3><i class="micon ico2"></i>5학년 1학기</h3>
+            </div>
+            <div class="con-wrap">
+                <strong><em>미답변</em> 문항이 있습니다. <br>그대로 답안을 제출하시겠습니까?</strong>
+                <div class="no_answer">
+                    <span>미답변</span>
+                    <ul class="no_answer_list">
+                        <li class="no_answer_item">2</li>
+                        <li class="no_answer_item">3</li>
+                        <li class="no_answer_item">12</li>
+                    </ul>
+                </div>
+                <div class="btn_group">
+                    <button type="button" class="btn btn-ani btn-secondary modal-close" onclick="modalClose('popup_opne');">제출취소</button>
+                    <a class="btn btn-ani btn-primary" onclick="modalOpen('popup_opne2');">제출하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--제출팝업 :: 완료 -->
+<div class="modal modal-popup question_modal" id="popup_opne2">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content">
+        <div class="popup-wrap">
+            <span class="flag"><span>1단원</span></span>
+            <div class="con-head">
+                <h3><i class="micon ico2"></i>5학년 1학기</h3>
+            </div>
+            <div class="con-wrap">
+                <span class="confirm_img"></span>
+                <strong><em>답안</em> 제출이 완료 되었습니다.</strong>
+                <div class="btn_group">
+                    <button type="button" class="btn btn-ani btn-primary modal-close" onclick="modalClose('popup_opne2');">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //제출팝업 :: 완료 팝업 열기
+    $(document).on("click", "#popup_btn2", function(){
+        sign_index = $("#popup_btn2").index(this);
+        $("#popup_opne2").addClass("active");
+    });
+    //제출팝업 :: 완료 팝업 닫기
+    $(".modal-close").on("click",function(){
+        $("#popup_opne2").removeClass("active");
+    });
+</script>
+
+</body>
+</html>

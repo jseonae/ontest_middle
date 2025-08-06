@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온평가 > 츨제내역</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/question_ind.css">
+    <link rel="stylesheet" href="/css/contents.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="text/javascript" src="/js/include.js"></script>
+    <script type="text/javascript" src="/js/contents.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<div id="header"></div>
+<!--[include]HEADER :: End -->
+
+<main id="container" class="sub">
+    <section class="sub_header">
+        <div class="login_info">
+            <div class="info_item">
+                <i class="sicon ico1"></i><span class="name"><b>김평가</b>선생님</span>
+                <span class="scoolname">충남초등학교</span>
+            </div>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+
+        <div id="location">
+            <a href="#" class="item home"><span>홈</span></a>
+            <a href="#" class="item">문제은행</a>
+            <a href="#" class="item">출제내역</a>
+        </div>
+
+        <div class="sub_title">
+            <h1>출제내역</h1>
+            <p>출제한 평가지 목록입니다.</p>
+        </div>
+    </section><!--//sub_header-->
+
+    <section id="content" class="list_wrap exam_list">
+        <div class="layout">
+            <div class="class_info">
+                <ul class="list_1st">
+                    <li><b>채점</b>이 <i class="state tx end line sm">완료</i>된 <i class="micon qr"></i><b>QR</b>을 클릭하면 채점이 완료된 화면으로 학생이 이동 가능 합니다.</li>
+                    <li><b>배포</b> <i class="state tx end sm">완료</i> 버튼을 누르시면 출제된 화면을 확인하실수 있습니다.</li>
+                </ul>
+            </div>
+            <div class="title_box">
+                <strong class="subtitle">
+                    <i class="hico hico1"></i>
+                    목록
+                </strong>
+                <div class="btn_group">
+                    <button type="submit" class="btn btn-ani btn-quaternary"><i class="sicon ico3"></i>선택삭제</button>
+                    <!-- 필요시 사용하기 <ul class="search_wrap">
+                        <li>
+                            <select class="select">
+                                <option selected="">선택</option>
+                                <option value="">선택1</option>
+                                <option value="">선택2</option>
+                                <option value="">선택3</option>
+                                <option value="">선택4</option>
+                                <option value="">선택5</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="select">
+                                <option selected="">선택</option>
+                                <option value="">선택1</option>
+                                <option value="">선택2</option>
+                                <option value="">선택3</option>
+                                <option value="">선택4</option>
+                                <option value="">선택5</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button type="submit" href="#" class="btn btn-ani btn-secondary">검색</button>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="table_wrap">
+                <table class="tbl_basic tbl_list center table-hover">
+                    <caption>개요</caption>
+                    <colgroup>
+                        <col style="width:4%"/>
+                        <col style="width:5%"/>
+                        <col style="width:5%"/>
+                        <col style="width:40%"/>
+                        <col style="width:8%"/>
+                        <col style="width:6%"/>
+                        <col style="width:6%"/>
+                        <col style="width:6%"/>
+                        <col style="width:7%"/>
+                        <col style="width:7%"/>
+                        <col style="width:5%"/>
+                        <col style="width:5%"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><input type="checkbox" id="allcheck" name="check"/><label for="allcheck"></label></th>
+                            <th scope="col">학년</th>
+                            <th scope="col">반</th>
+                            <th scope="col">평가지명</th>
+                            <th scope="col">생성일</th>
+                            <th scope="col" class="th_deep">수정</th>
+                            <th scope="col" class="th_deep">미리보기</th>
+                            <th scope="col" class="th_deep">QR</th>
+                            <th scope="col" class="th_deep">배포</th>
+                            <th scope="col" class="th_deep">채점</th>
+                            <th scope="col" class="th_deep">메모</th>
+                            <th scope="col" class="th_deep">삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><input type="checkbox" id="check0" name="check"/><label for="check0"></label></th>
+                            <td>5</td>
+                            <td>1</td>
+                            <td class="td_left"><b>5학년 1학기 영어(동아) 평가지</b>25문제 | 1단원, 2단원</td>
+                            <td>24.09.30</td>
+                            <td><a href="/sub0201.html" class="micon ico5">수정</a></td>
+                            <td><a href="/sub0202.html" class="micon ico7">보기</a></td>
+                            <td><a href="#" class="micon qr">QR</a></td>
+                            <td><a href="/sub020303.html" class="btn btn-ani btn-primary sm">배포하기</a></td>
+                            <td><a class="state tx score1">채점전</a></td>
+                            <td><a  onclick="modalOpen('popup_memo');" class="micon memo no">메모</a></td>
+                            <td><a href="#" class="micon ico8">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><input type="checkbox" id="check1" name="check" disabled/><label for="check1"></label></th>
+                            <td>5</td>
+                            <td>1</td>
+                            <td class="td_left"><b>5학년 1학기 영어(동아) 평가지</b>25문제 | 1단원, 2단원 <i class="state tx sm ico_ai">AI출제</i></td>
+                            <td>24.09.30</td>
+                            <td><a href="#" class="micon ico5">수정</a></td>
+                            <td><a href="#" class="micon ico7">보기</a></td>
+                            <td><a href="#" class="micon qr">QR</a></td>
+                            <td><a href="/sub020305.html" class="btn btn-ani btn-outline-primary sm">평가중</a></td>
+                            <td><a href="/sub020301.html" class="btn state tx score6">미완료</a></td>
+                            <td><a onclick="modalOpen('popup_memo_mdf');" class="micon memo on">메모수정</a></td>
+                            <td><a href="#" class="micon ico8">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><input type="checkbox" id="check2" name="check" disabled/><label for="check2"></label></th>
+                            <td>5</td>
+                            <td>1</td>
+                            <td class="td_left"><b>5학년 1학기 영어(동아) 평가지</b>25문제 | 1단원, 2단원</td>
+                            <td>24.09.30</td>
+                            <td><a href="#" class="micon ico5">수정</a></td>
+                            <td><a href="#" class="micon ico7">보기</a></td>
+                            <td><a href="#" class="micon qr gr">QR</a></td>
+                            <td><i class="state tx end">완료</i></td>
+                            <td><a href="/sub020302.html" class="btn state tx score6">미완료</a></td>
+                            <td><a class="micon memo on">메모</a></td>
+                            <td><a href="#" class="micon ico8">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><input type="checkbox" id="check3" name="check" disabled/><label for="check3"></label></th>
+                            <td>5</td>
+                            <td>1</td>
+                            <td class="td_left"><b>5학년 1학기 영어(동아) 평가지</b>25문제 | 1단원, 2단원</td>
+                            <td>24.09.30</td>
+                            <td><a href="#" class="micon ico5">수정</a></td>
+                            <td><a href="#" class="micon ico7">보기</a></td>
+                            <td><a href="#" class="micon qr gr">QR</a></td>
+                            <td><i class="state tx end">완료</i></td>
+                            <td><a href="#" class="btn state tx end line">완료</a></td>
+                            <td><a class="micon memo on">메모</a></td>
+                            <td><a href="#" class="micon ico8">삭제</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="paginate">
+                <a href="#" class="dir first">첫페이지로 이동</a>
+                <a href="#" class="dir prev">이전페이지로 이동</a>
+                <ul>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+                <a href="#" class="dir next">다음페이지로 이동</a>
+                <a href="#" class="dir last">마지막페이지로 이동</a>
+            </div>
+        </div>
+    </section>
+
+    <!--메모 팝업-->
+    <div class="modal modal-popup answerPop memoPop" id="popup_memo">
+        <div class="modal-background is-click-disabled"></div>
+        <div class="modal-content">
+            <button type="button" class="modal-close bn_close bk" onclick="modalClose('popup_memo');">닫기</button>
+            <div class="popup-wrap">
+                <div class="con-head">
+                    <h3>메모</h3>
+                </div>
+                <div class="con-wrap">
+                    <textarea placeholder="메모를 입력하세요."></textarea>
+                    <div class="btn_group">
+                        <a onclick="modalClose('popup_memo');" class="btn btn-ani btn-secondary">취소</a>
+                        <a onclick="modalClose('popup_memo');" class="btn btn-ani btn-primary">저장</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--//메모 팝업-->
+
+     <!--메모 수정 팝업-->
+     <div class="modal modal-popup answerPop memoPop" id="popup_memo_mdf">
+        <div class="modal-background is-click-disabled"></div>
+        <div class="modal-content">
+            <button type="button" class="modal-close bn_close bk" onclick="modalClose('popup_memo_mdf');">닫기</button>
+            <div class="popup-wrap">
+                <div class="con-head">
+                    <h3>메모</h3>
+                </div>
+                <div class="con-wrap">
+                    <textarea placeholder="메모를 입력하세요." disabled>온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. </textarea>
+                    <div class="btn_group">
+                        <a onclick="modalClose('popup_memo_mdf');" class="btn btn-ani btn-secondary">취소</a>
+                        <a onclick="modalOpen('popup_memo_mdf2')" class="btn btn-ani btn-quaternary">수정</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--//메모 수정 팝업-->   
+
+     <!--메모 수정 팝업 2-->
+     <div class="modal modal-popup answerPop memoPop" id="popup_memo_mdf2">
+        <div class="modal-background is-click-disabled"></div>
+        <div class="modal-content">
+            <button type="button" class="modal-close bn_close bk" onclick="modalClose('popup_memo_mdf2');">닫기</button>
+            <div class="popup-wrap">
+                <div class="con-head">
+                    <h3>메모</h3>
+                </div>
+                <div class="con-wrap">
+                    <textarea placeholder="메모를 입력하세요.">온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. 온평가에 대한 메모를 하는 곳입니다. </textarea>
+                    <div class="btn_group">
+                        <a onclick="modalClose('popup_memo_mdf2');" class="btn btn-ani btn-secondary">취소</a>
+                        <a onclick="modalClose('popup_memo_mdf2');" class="btn btn-ani btn-primary">저장</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--//메모 수정 팝업 2-->  
+
+
+
+
+<!--[include]HEADER :: Start -->
+<div id="footer"></div>
+<!--[include]HEADER :: End -->
+
+</main>
+
+</div>
+
+</body>
+</html>

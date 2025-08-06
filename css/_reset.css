@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-touch-callout:none;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, button,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, select {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size:100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+    height: 100%;
+	color:var(--gray_90);
+    font-size:1rem;
+    line-height:1.5;
+	overflow-y: auto;
+}
+html {
+	-webkit-font-size-adjust:none;
+}
+ol, ul, li {
+	list-style: none;
+	list-style-image:none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+em, i{
+	font-style: normal;
+}
+img {
+	max-width:100%;
+	border:0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	vertical-align: middle;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+	font-size:100%
+}
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {
+	margin:0;
+	padding:0
+}
+input[type="search"] {
+	-webkit-appearance:textfield;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	box-sizing:content-box
+}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance:none
+}
+input[type="checkbox"],input[type="radio"] {
+	box-sizing:border-box
+}
+select {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+select:focus {
+	position:relative
+}
+form label,form input,form span,form img,form em,form a {
+	display:inline-block;
+	margin-top:0;
+	vertical-align:middle
+}
+form fieldset,legend,form input {
+	border:0
+}
+a {
+	text-decoration:none;
+	color:var(--gray_90);
+	cursor: pointer;
+}
+a:link,a:visited {
+	text-decoration:none
+}
+a:hover,a:active {
+	text-decoration:none
+}
+button {
+	border:0;
+	cursor:pointer
+}
+button,input,select,textarea {
+	margin:0;
+	font-size:100%;
+	vertical-align:baseline;
+	vertical-align:middle
+}
+button,input {
+	overflow:visible;
+	line-height:normal
+}
+button,select {
+	text-transform:none
+}
+button[disabled],html input[disabled] {
+	cursor:default
+}
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
+	overflow:visible;
+	cursor:pointer;
+	-webkit-appearance:button
+}
+button::-moz-focus-inner,input::-moz-focus-inner {
+	border:0;
+	padding:0
+}
+i,em{
+	font-style:normal;
+}
+th,td,input,textarea,select {
+	font-size:1rem;
+}
+address,caption,cite,code,dfn,em,var {
+	font-style:normal;
+	font-weight:normal
+}
+abbr,acronym {
+	border:0
+}
+hr {
+	display:none;
+	clear:both
+}
+label {
+	cursor:pointer
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {
+	display:block
+}
+label,select,input,button {
+	vertical-align:middle
+}

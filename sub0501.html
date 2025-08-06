@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온평가 > 관리자 통계</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/question_ind.css">
+    <link rel="stylesheet" href="/css/contents.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="text/javascript" src="/js/include.js"></script>
+    <script type="text/javascript" src="/js/contents.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<div id="header"></div>
+<!--[include]HEADER :: End -->
+
+<main id="container" class="sub">
+    <section class="sub_header">
+        <div class="login_info">
+            <div class="info_item">
+                <i class="sicon ico1"></i><span class="name"><b>김평가</b>선생님</span>
+                <span class="scoolname">충남초등학교</span>
+            </div>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+
+        <div id="location">
+            <a href="#" class="item home"><span>홈</span></a>
+            <a href="#" class="item">문제은행</a>
+            <a href="#" class="item">생성하기</a>
+        </div>
+
+        <div class="sub_title">
+            <h1>관리자 통계</h1>
+            <p>전 학급의 통계를 확인합니다.</p>
+        </div>
+    </section><!--//sub_header-->
+
+    <section id="content" class="manager_wrap">
+        <div class="layout">
+            <div class="btn_group">
+                <a href="/sub0203.html" class="btn btn-ani btn-outline-secondary"><i class="sicon ico_print"></i>인쇄하기</a>
+            </div>
+            <div class="tabs">
+                <div class="tab-header">
+                    <button rel="tab1" class="active">그래프</button>
+                    <button rel="tab2">데이터</button>
+                </div>
+                <div class="tab-body" id="tab1">
+                    <div class="chart_group">
+                        <div class="chart_item num1">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico6"></i>이용 학급수</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>지역별 이용 학급수를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart_item num2">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico7"></i>이용 학생수</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>지역별 이용 학생수를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart_item num3">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico8"></i>교과별 출제수</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>교과별 출제수를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <strong class="total"><em>총 문제수</em><span>5,000,000</span></strong>
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart3"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart_item num4">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico9"></i>교과별 평가 학생수</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>교과별 평가 학생수를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <strong class="total"><em>총 학생수</em><span>5,000,000</span></strong>
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart4"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart_item num5">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico10"></i>교과별 학력 변화 추이</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>교과별 학력 변화 추이를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart5"></canvas>
+                                </div>
+                                <div id="custom-legend" class="legend_wrap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-body" id="tab2">
+                    <div class="tabin">
+                        <div class="tabin-header">
+                            <button rel="tabin1" class="active">이용학급수</button>
+                            <button rel="tabin2">이용학생수</button>
+                            <button rel="tabin3">교과별 출제수</button>
+                            <button rel="tabin4">교과별 평가 학생수</button>
+                            <button rel="tabin5">교과별 학력 변화 추이</button>
+                        </div>
+                        <div class="tabin-body" id="tabin1" class="active">탭1</div>
+                        <div class="tabin-body" id="tabin2">탭2</div>
+                        <div class="tabin-body" id="tabin3">탭3</div>
+                        <div class="tabin-body" id="tabin4">탭4</div>
+                        <div class="tabin-body" id="tabin5">탭5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!--[include]HEADER :: Start -->
+<div id="footer"></div>
+<!--[include]HEADER :: End -->
+
+</main>
+
+</div>
+
+<script>
+    //교과별 출제수
+    var ctx = document.getElementById('managerChart1').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['천안', '보령', '서산', '당진', '부여', '청양', '예산', '공주', '아산', '논산', '금산', '서천', '홍성', '태안'],
+            datasets: [{
+                backgroundColor: [
+                    'rgba(133, 196, 255, .3)',
+                ],
+                borderColor:[
+                    'rgba(133, 196, 255, 1)',
+                ],
+                borderWidth: 1,
+                barThickness: 20, //그래프 굵기
+                borderRadius: 20, // 그래프 둥글기
+                data:[140, 50, 60, 70, 80, 100, 60, 70, 120, 20, 55, 32, 44, 66],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                x: {
+                        grid: { color: 'transparent'},
+                },
+                y: {
+                    min: 0,
+                    max: 150,
+                    ticks: { stepSize: 50 },
+                },
+            }
+        }        
+    }); 
+
+    //이용 학생수
+    var ctx = document.getElementById('managerChart2').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['천안', '보령', '서산', '당진', '부여', '청양', '예산', '공주', '아산', '논산계룡', '금산', '서천', '홍성', '태안'],
+            datasets: [{
+                backgroundColor: [
+                    'rgba(255, 174, 53, .3)',
+                ],
+                borderColor:[
+                    'rgba(255, 174, 53, 1)',
+                ],
+                borderWidth: 1,
+                barThickness: 20, //그래프 굵기
+                borderRadius: 20, // 그래프 둥글기
+                data:[140, 50, 60, 70, 80, 100, 60, 70, 120, 20, 55, 32, 44, 66],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                x: {
+                        grid: { color: 'transparent'},
+                },
+                y: {
+                    min: 0,
+                    max: 300,
+                    ticks: { stepSize: 50 },
+                },
+            }
+        }        
+    }); 
+
+    //교과별 출제수
+    var ctx = document.getElementById('managerChart3').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['영어', '과학', '사회', '수학', '국어'],
+            datasets: [{
+                backgroundColor: [
+                    'rgba(201, 133, 255, .3)',
+                    'rgba(66, 211, 177, .3)',
+                    'rgba(255, 174, 53, .3)',
+                    'rgba(230, 142, 171, .3)',
+                    'rgba(133, 196, 255, .3)',
+                ],
+                borderColor:[
+                    'rgba(201, 133, 255, 1)',
+                    'rgba(66, 211, 177, 1)',
+                    'rgba(255, 174, 53, 1)',
+                    'rgba(230, 142, 171, 1)',
+                    'rgba(133, 196, 255, 1)',
+                ],
+                borderWidth: 1,
+                barThickness: 20, //그래프 굵기
+                borderRadius: 20, // 그래프 둥글기
+                data:[20, 50, 60, 70, 80],
+            }]
+        },
+        options:{
+            indexAxis: 'y', //수평그래프
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: 100,
+                    ticks: { stepSize: 10 },
+                },
+                y: {
+                    //display: false
+                },
+            }
+        }        
+    }); 
+
+    //교과별 평가 학생수
+    var ctx = document.getElementById('managerChart4').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['영어', '과학', '사회', '수학', '국어'],
+            datasets: [{
+                backgroundColor: [
+                    'rgba(201, 133, 255, .3)',
+                    'rgba(66, 211, 177, .3)',
+                    'rgba(255, 174, 53, .3)',
+                    'rgba(230, 142, 171, .3)',
+                    'rgba(133, 196, 255, .3)',
+                ],
+                borderColor:[
+                    'rgba(201, 133, 255, 1)',
+                    'rgba(66, 211, 177, 1)',
+                    'rgba(255, 174, 53, 1)',
+                    'rgba(230, 142, 171, 1)',
+                    'rgba(133, 196, 255, 1)',
+                ],
+                borderWidth: 1,
+                barThickness: 20, //그래프 굵기
+                borderRadius: 20, // 그래프 둥글기
+                data:[300, 400, 500, 785, 900],
+            }]
+        },
+        options:{
+            indexAxis: 'y', //수평그래프
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: 1000,
+                    ticks: { stepSize: 100 },
+                },
+                y: {
+                    //display: false
+                },
+            }
+        }        
+    }); 
+
+
+    //교과별 학력 변화 추이 그래프
+    function createChart(ctx, legendContainerId, chartData) {
+            var chart = new Chart(ctx, {
+            type: 'line',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio :false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    customLegend: {
+                        afterUpdate: function(chart) {
+                        var legendContainer = document.getElementById(legendContainerId);
+                        legendContainer.innerHTML = chart.generateLegend();
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 3,
+                        ticks: { stepSize: 0.5 },
+                    },
+                    x: {
+                        //grid: { color: 'transparent'},
+                    },
+                },
+            },
+        });
+
+        chart.generateLegend = function() {
+            var text = '<ul>';
+            chart.data.datasets.forEach(function(dataset, index) {
+                text += '<li onclick="toggleDataset(' + index + ', \'' + legendContainerId + '\')">';
+                text += '<span></span>';// style="background-color:' + dataset.borderColor + '"
+                text += dataset.label;
+                text += '</li>';
+            });
+            text += '</ul>';
+            return text;
+        };
+
+        return chart;
+    }
+    // 데이터셋 토글 기능
+    function toggleDataset(index, legendContainerId) {
+        var chart;
+        switch(legendContainerId) {
+            case 'custom-legend': chart = chart1; break;
+        }
+        var meta = chart.getDatasetMeta(index);
+        meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+        chart.update();
+    }
+    var chartData1 = {
+        labels: ['', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //맨앞에 0값
+        datasets: [
+            {
+                label: '국어',
+                backgroundColor: 'rgb(133, 196, 255)',
+                borderWidth: 2,
+                borderColor: 'rgb(133, 196, 255)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [0, 0.1, 0.3, 0.5, 1.2, 2.0, 2.2, 2.9, 1.8, 1, 2],
+            },
+            {
+                label: '수학',
+                borderWidth: 2,
+                backgroundColor: 'rgb(230, 142, 171)',
+                borderColor: 'rgb(230, 142, 171)',
+                data: [0, 0.5, 0.6, 1, 0.8, 1.9, 2.6, 1.9, 1, 1.7, 2.2],
+            },
+            {
+                label: '사회',
+                borderWidth: 2,
+                backgroundColor: 'rgb(255, 174, 53)',
+                borderColor: 'rgb(255, 174, 53)',
+                data: [0, 0.7, 0.5, 1.2, 1.8, 2.9, 2.8, 1.3, 2.3, 1.4, 1.8],
+            },
+            {
+                label: '과학',
+                borderWidth: 2,
+                backgroundColor: 'rgb(66, 211, 177)',
+                borderColor: 'rgb(66, 211, 177)',
+                data: [0, 0.6, 0.2, 1.6, 1.9, 1.5, 2.2, 2.3, 1.9, 2.2, 2.6],
+            },
+            {
+                label: '영어',
+                borderWidth: 2,
+                backgroundColor: 'rgb(201, 133, 255)',
+                borderColor: 'rgb(201, 133, 255)',
+                data: [0, 0.3, 0.6, 1.8, 2, 2.2, 2.3, 2.4, 2.5, 2.6, 2.8],
+            },
+        ]
+    };
+    var chart1 = createChart(document.getElementById('managerChart5').getContext('2d'), 'custom-legend', chartData1);
+    document.getElementById('custom-legend').innerHTML = chart1.generateLegend();
+
+
+</script>
+
+
+</body>
+</html>

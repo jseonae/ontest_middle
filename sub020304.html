@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온평가 > 배포하기 > 전송하기</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/question_ind.css">
+    <link rel="stylesheet" href="/css/contents.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="text/javascript" src="/js/include.js"></script>
+    <script type="text/javascript" src="/js/contents.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<div id="header"></div>
+<!--[include]HEADER :: End -->
+
+<main id="container" class="sub">
+    <section class="sub_header">
+        <div class="login_info">
+            <div class="info_item">
+                <i class="sicon ico1"></i><span class="name"><b>김평가</b>선생님</span>
+                <span class="scoolname">충남초등학교</span>
+            </div>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+
+        <div id="location">
+            <a href="#" class="item home"><span>홈</span></a>
+            <a href="#" class="item">문제은행</a>
+            <a href="#" class="item">배포하기</a>
+            <a href="#" class="item">전송하기</a>
+        </div>
+
+        <div class="sub_title">
+            <h1>전송하기</h1>
+            <p>평가지를 전송합니다.</p>
+        </div>
+    </section><!--//sub_header-->
+
+    <section id="content" class="send_wrap">
+        <div class="layout">
+            <div class="prev_info">
+                <div class="info_box">
+                    <div>
+                        <div class="text_box">
+                            <div class="item_subject">
+                                <i class="ico_logo type1">온평가</i>
+                                <b>영어</b>
+                                <span class="state tx">5학년 1학기</span>
+                            </div>
+                            <span><em>총 문제수</em><b>25</b>문제</span>
+                            <ul>
+                                <li>선택형 19</li>
+                                <li>서답형 6</li>
+                            </ul>
+                            <div class="unit__wrap">
+                                <span class="unit__item">1단원</span>
+                                <span class="unit__item">2단원</span>
+                                <span class="unit__item">3단원</span>
+                            </div>
+                        </div>
+                        <div class="graph_wrap">
+                            <div class="infoChart_wrap"><canvas id="infoChart"></canvas></div>
+                            <ul>
+                                <li>상</li>
+                                <li>중</li>
+                                <li>하</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="class_code_wrap">
+                            <span>학급코드</span>
+                            <div class="class_code">a54321</div>
+                        </div>
+                        <div class="qrcode">
+                            <a onclick="modalOpen('qrcode_pop');"><img src="../images/common/qrcode_img.png"/></a>
+                        </div>
+                        <span class="description wp100">※QR코드 클릭시 확대 됩니다.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title_box">
+                <strong class="subtitle">
+                    <i class="hico hico2"></i>
+                    학생 접속현황
+                    <span>학생을 클릭하시면 결시 체크가 됩니다.</span>
+                </strong>
+
+            </div>
+
+            <div class="connect_wrap">
+                <div class="connect_summary">
+                    <span class="pers"><b>9명</b><em>/</em>19명</span>
+                    <ul class="badge_wrap">
+                        <li><i class="badge badge1">접속</i></li>
+                        <li><i class="badge badge2">결시</i></li>
+                    </ul>
+                </div>
+                <div class="connect_item_wrap">
+                    <a href="#" class="connect_item on"><i></i><span>학생 1</span></a>
+                    <a href="#" class="connect_item off"><i></i><span>학생 2</span></a>
+                    <a href="#" class="connect_item on"><i></i><span>학생 3</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 4</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 5</span></a>
+                    <a href="#" class="connect_item on"><i></i><span>학생 6</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 7</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 8</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 9</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 10</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 11</span></a>
+                    <a href="#" class="connect_item on"><i></i><span>학생 12</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 13</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 14</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 15</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 16</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 17</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 18</span></a>
+                    <a href="#" class="connect_item on"><i></i><span>학생 19</span></a>
+                    <a href="#" class="connect_item"><i></i><span>학생 20</span></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="btn_group">
+            <a href="/sub020305.html" class="btn btn-ani btn-primary lg">전송하기</a>
+        </div>
+    </section>
+
+<!--[include]HEADER :: Start -->
+<div id="footer"></div>
+<!--[include]HEADER :: End -->
+
+<div class="modal modal-popup" id="qrcode_pop">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content">
+        <button type="button" class="modal-close bn_close bk" onclick="modalClose('qrcode_pop');">닫기</button>
+        <div class="popup-wrap">
+            <div class="con-head">
+                <h3>n98242</h3>
+            </div>
+            <div class="con-wrap">
+                <svg viewBox="0 0 41 41"></svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+</div>
+
+<script>
+var ctx = document.getElementById('infoChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['상','중','하'],
+            datasets: [{
+                backgroundColor: [
+                    'rgb(255, 86, 86)',
+                    'rgb(0, 211, 171)',
+                    'rgb(255, 184, 62)',
+                    ],
+                barThickness: 40, //그래프 굵기
+                borderRadius: 6, // 그래프 둥글기
+                borderSkipped: false, //그래프 둥글기 아래부분 나오게
+                data:[2, 10, 5],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+                tooltip: { enabled: false}, // 툴팁 숨김
+            },
+            scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false
+                },
+            }
+        }        
+    });
+</script>
+
+
+</body>
+</html>
+
+
