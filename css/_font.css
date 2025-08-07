@@ -1,300 +1,185 @@
 @charset "UTF-8";
 
-
-
-/*프리텐다드*/
+/*엘리스디지털배움체 -강조용 디자인 폰트-*/
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 900;
-    font-display: swap;
-    src: local('Pretendard Black'), 
-    url('../font/Pretendard/woff2/Pretendard-Black.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Black.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 800;
-    font-display: swap;
-    src: local('Pretendard ExtraBold'), 
-    url('../font/Pretendard/woff2/Pretendard-ExtraBold.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-ExtraBold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 700;
-    font-display: swap;
-    src: local('Pretendard Bold'), 
-    url('../font/Pretendard/woff2/Pretendard-Bold.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 600;
-    font-display: swap;
-    src: local('Pretendard SemiBold'), 
-    url('../font/Pretendard/woff2/Pretendard-SemiBold.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-SemiBold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-display: swap;
-    src: local('Pretendard Medium'), 
-    url('../font/Pretendard/woff2/Pretendard-Medium.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Medium.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Pretendard Regular'), 
-    url('../font/Pretendard/woff2/Pretendard-Regular.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 300;
-    font-display: swap;
-    src: local('Pretendard Light'), 
-    url('../font/Pretendard/woff2/Pretendard-Light.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Light.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 200;
-    font-display: swap;
-    src: local('Pretendard ExtraLight'), 
-    url('../font/Pretendard/woff2/Pretendard-ExtraLight.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-ExtraLight.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 100;
-    font-display: swap;
-    src: local('Pretendard Thin'), 
-    url('../font/Pretendard/woff2/Pretendard-Thin.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Thin.woff') format('woff');
-}
-
-
-/*프리텐다드*/
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 900;
-    font-display: swap;
-    src: local('Pretendard Black'), 
-    url('../font/Pretendard/woff2/Pretendard-Black.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Black.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 800;
-    font-display: swap;
-    src: local('Pretendard ExtraBold'), 
-    url('../font/Pretendard/woff2/Pretendard-ExtraBold.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-ExtraBold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 700;
-    font-display: swap;
-    src: local('Pretendard Bold'), 
-    url('../font/Pretendard/woff2/Pretendard-Bold.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 600;
-    font-display: swap;
-    src: local('Pretendard SemiBold'), 
-    url('../font/Pretendard/woff2/Pretendard-SemiBold.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-SemiBold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 500;
-    font-display: swap;
-    src: local('Pretendard Medium'), 
-    url('../font/Pretendard/woff2/Pretendard-Medium.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Medium.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Pretendard Regular'), 
-    url('../font/Pretendard/woff2/Pretendard-Regular.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 300;
-    font-display: swap;
-    src: local('Pretendard Light'), 
-    url('../font/Pretendard/woff2/Pretendard-Light.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Light.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 200;
-    font-display: swap;
-    src: local('Pretendard ExtraLight'), 
-    url('../font/Pretendard/woff2/Pretendard-ExtraLight.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-ExtraLight.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 100;
-    font-display: swap;
-    src: local('Pretendard Thin'), 
-    url('../font/Pretendard/woff2/Pretendard-Thin.woff2') format('woff2'), 
-    url('../font/Pretendard/woff/Pretendard-Thin.woff') format('woff');
-}
-
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 300;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 200;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-@font-face {
-    font-family: 'Pretendard_mth';
-    font-weight: 100;
-    font-display: swap;
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot?#iefix) format("embedded-opentype"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2) format("woff2"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff) format("woff"),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.ttf) format("truetype");
-    unicode-range: U+0030-0039;
-}
-
-
-/*에스코어드림*/
-@font-face {
-  font-family: 'score';
+  font-family: 'EliceDigitalBaeum';
   font-weight:400;
-  src: url(../font/scoredream/scdream4.woff) format('woff');
+  font-style: normal;
+  font-display: swap;
+  src: url('../font/EliceDigitalBaeum/EliceDigitalBaeum-Bd.woff2') format('woff2');
 }
+
+/*프리텐다드 -전역 사용 폰트-*/
 @font-face {
-  font-family: 'score';
-  font-weight:500;
-  src: url(../font/scoredream/scdream5.woff) format('woff');
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('PretendardGov Black'), 
+    url('../font/PretendardGovGov/woff2/PretendardGovGov-Black.woff2') format('woff2'), 
+    url('../font/PretendardGovGov/woff/PretendardGovGov-Black.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'score';
-  font-weight:600;
-  src: url(../font/scoredream/scdream6.woff) format('woff');
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-display: swap;
+    src: local('PretendardGov ExtraBold'), 
+    url('../font/PretendardGov/woff2/PretendardGov-ExtraBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-ExtraBold.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'score';
-  font-weight:800;
-  src: url(../font/scoredream/scdream8.woff) format('woff');
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('PretendardGov Bold'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Bold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src: local('PretendardGov SemiBold'), 
+    url('../font/PretendardGov/woff2/PretendardGov-SemiBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src: local('PretendardGov Medium'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Medium.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('PretendardGov Regular'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Regular.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('PretendardGov Light'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Light.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-display: swap;
+    src: local('PretendardGov ExtraLight'), 
+    url('../font/PretendardGov/woff2/PretendardGov-ExtraLight.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-display: swap;
+    src: local('PretendardGov Thin'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Thin.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Thin.woff') format('woff');
+}
+
+
+/*프리텐다드 -수학 문항용 폰트 / 질문, 예문, 보기, 해설에만 사용 /-*/
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 900;
+    font-display: swap;
+    src: local('PretendardGov Black'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Black.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 800;
+    font-display: swap;
+    src: local('PretendardGov ExtraBold'), 
+    url('../font/PretendardGov/woff2/PretendardGov-ExtraBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 700;
+    font-display: swap;
+    src: local('PretendardGov Bold'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Bold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 600;
+    font-display: swap;
+    src: local('PretendardGov SemiBold'), 
+    url('../font/PretendardGov/woff2/PretendardGov-SemiBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 500;
+    font-display: swap;
+    src: local('PretendardGov Medium'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Medium.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 400;
+    font-display: swap;
+    src: local('PretendardGov Regular'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Regular.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 300;
+    font-display: swap;
+    src: local('PretendardGov Light'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Light.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 200;
+    font-display: swap;
+    src: local('PretendardGov ExtraLight'), 
+    url('../font/PretendardGov/woff2/PretendardGov-ExtraLight.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 100;
+    font-display: swap;
+    src: local('PretendardGov Thin'), 
+    url('../font/PretendardGov/woff2/PretendardGov-Thin.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGov-Thin.woff') format('woff');
+}
+
+/*리디바탕 -수학 문항용 숫자 폰트 / 질문, 예문, 보기, 해설에만 사용 /-*/
+@font-face {
+    font-family: 'Pretendard_mth';
+    font-weight: 500;
+    font-display: swap;
+    src: local('RIDIBatang'), 
+    url('../font/RIDIBatang/RIDIBatang.woff') format('woff');
+    unicode-range: U+0030-0039;
 }

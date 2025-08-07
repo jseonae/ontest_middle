@@ -218,6 +218,20 @@
 	--orange_95 : #AE6600;
 	--orange_100 : #804D00;
 
+	/* DeepOrange - color */
+	--deepOrange_5 : #FEF8F7;
+	--deepOrange_10 : #FEF2EE;
+	--deepOrange_20 : #FFE4DA;
+	--deepOrange_30 : #FBD7CA;
+	--deepOrange_40 : #F9C4B1;
+	--deepOrange_50 : #F6A98D;
+	--deepOrange_60 : #F49977;
+	--deepOrange_70 : #F17F55;
+	--deepOrange_80 : #DB744D;
+	--deepOrange_90 : #AB5A3C;
+	--deepOrange_95 : #85462F;
+	--deepOrange_100 : #653524;	
+
 	/* Yellow - color */
 	--yellow_5 : #FFFBEB;
 	--yellow_10 : #FFF7D6;
