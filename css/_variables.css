@@ -120,6 +120,16 @@
 	--information_70 : #39506C;
 	--information_90 : #223A58;
 
+	/* graph - color */
+	--graph-yellow : #FFCF33;
+	--graph-blue_1 : #2ABEFD;
+	--graph-blue_2 : #47A8F7;
+	--graph-blue_3 : #5785FF;
+	--graph-pink : #FD9595;
+	--graph-purple : #7F81E8;
+	--graph-green_1 : #66CE95;
+	--graph-green_2 : #0DAFA6;
+	--graph-brown : #D5684D;
 
 	/*/////////THEME COLOR/////////*/
 	/* lightGray - color */
