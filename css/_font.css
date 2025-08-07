@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
+/*지마켓산스 -메인타이틀 폰트-*/
+@font-face {
+    font-family: 'Gmarket';
+    font-weight:100;
+    font-style: normal;
+    font-display: swap;
+    src: url('../font/GmarketSans/GmarketSansLight.woff') format('woff')
+}
+@font-face {
+    font-family: 'Gmarket';
+    font-weight:400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../font/GmarketSans/GmarketSansMedium.woff') format('woff')
+}
+@font-face {
+    font-family: 'Gmarket';
+    font-weight:700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../font/GmarketSans/GmarketSansBold.woff') format('woff')
+}
+
 /*엘리스디지털배움체 -강조용 디자인 폰트-*/
 @font-face {
   font-family: 'EliceDigitalBaeum';
