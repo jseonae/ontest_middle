@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.style_wrap {width:100%;max-width:1600px;margin-left:240px}
+.style_wrap {max-width:1600px;margin-left:240px}/*width:100%;*/
 .style_wrap > section {padding:60px 0;}
 .style_wrap h2 {font-size:1.4rem;margin-bottom:1rem;padding-top:2rem;font-weight: 700;font-family: var(--f_gmk);}
 .style_wrap h2 small {font-size: 1rem;font-weight: 400;color: var(--bluegray_70);font-family: var(--f_ptd);}

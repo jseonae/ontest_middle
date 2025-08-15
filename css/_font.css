@@ -38,8 +38,8 @@
     font-weight: 900;
     font-display: swap;
     src: local('PretendardGov Black'), 
-    url('../font/PretendardGovGov/woff2/PretendardGovGov-Black.woff2') format('woff2'), 
-    url('../font/PretendardGovGov/woff/PretendardGovGov-Black.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Black.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Black.woff') format('woff');
 }
 
 @font-face {
@@ -47,8 +47,8 @@
     font-weight: 800;
     font-display: swap;
     src: local('PretendardGov ExtraBold'), 
-    url('../font/PretendardGov/woff2/PretendardGov-ExtraBold.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-ExtraBold.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-ExtraBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-ExtraBold.woff') format('woff');
 }
 
 @font-face {
@@ -56,8 +56,8 @@
     font-weight: 700;
     font-display: swap;
     src: local('PretendardGov Bold'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Bold.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Bold.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Bold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -65,8 +65,8 @@
     font-weight: 600;
     font-display: swap;
     src: local('PretendardGov SemiBold'), 
-    url('../font/PretendardGov/woff2/PretendardGov-SemiBold.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-SemiBold.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-SemiBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-SemiBold.woff') format('woff');
 }
 
 @font-face {
@@ -74,8 +74,8 @@
     font-weight: 500;
     font-display: swap;
     src: local('PretendardGov Medium'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Medium.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Medium.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Medium.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -83,8 +83,8 @@
     font-weight: 400;
     font-display: swap;
     src: local('PretendardGov Regular'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Regular.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Regular.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Regular.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -92,8 +92,8 @@
     font-weight: 300;
     font-display: swap;
     src: local('PretendardGov Light'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Light.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Light.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Light.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Light.woff') format('woff');
 }
 
 @font-face {
@@ -101,8 +101,8 @@
     font-weight: 200;
     font-display: swap;
     src: local('PretendardGov ExtraLight'), 
-    url('../font/PretendardGov/woff2/PretendardGov-ExtraLight.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-ExtraLight.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-ExtraLight.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-ExtraLight.woff') format('woff');
 }
 
 @font-face {
@@ -110,8 +110,8 @@
     font-weight: 100;
     font-display: swap;
     src: local('PretendardGov Thin'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Thin.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Thin.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Thin.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Thin.woff') format('woff');
 }
 
 
@@ -121,8 +121,8 @@
     font-weight: 900;
     font-display: swap;
     src: local('PretendardGov Black'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Black.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Black.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Black.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Black.woff') format('woff');
 }
 
 @font-face {
@@ -130,8 +130,8 @@
     font-weight: 800;
     font-display: swap;
     src: local('PretendardGov ExtraBold'), 
-    url('../font/PretendardGov/woff2/PretendardGov-ExtraBold.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-ExtraBold.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-ExtraBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-ExtraBold.woff') format('woff');
 }
 
 @font-face {
@@ -139,8 +139,8 @@
     font-weight: 700;
     font-display: swap;
     src: local('PretendardGov Bold'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Bold.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Bold.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Bold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -148,8 +148,8 @@
     font-weight: 600;
     font-display: swap;
     src: local('PretendardGov SemiBold'), 
-    url('../font/PretendardGov/woff2/PretendardGov-SemiBold.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-SemiBold.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-SemiBold.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-SemiBold.woff') format('woff');
 }
 
 @font-face {
@@ -157,8 +157,8 @@
     font-weight: 500;
     font-display: swap;
     src: local('PretendardGov Medium'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Medium.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Medium.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Medium.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -166,8 +166,8 @@
     font-weight: 400;
     font-display: swap;
     src: local('PretendardGov Regular'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Regular.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Regular.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Regular.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -175,8 +175,8 @@
     font-weight: 300;
     font-display: swap;
     src: local('PretendardGov Light'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Light.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Light.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Light.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Light.woff') format('woff');
 }
 
 @font-face {
@@ -184,8 +184,8 @@
     font-weight: 200;
     font-display: swap;
     src: local('PretendardGov ExtraLight'), 
-    url('../font/PretendardGov/woff2/PretendardGov-ExtraLight.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-ExtraLight.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-ExtraLight.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-ExtraLight.woff') format('woff');
 }
 
 @font-face {
@@ -193,8 +193,8 @@
     font-weight: 100;
     font-display: swap;
     src: local('PretendardGov Thin'), 
-    url('../font/PretendardGov/woff2/PretendardGov-Thin.woff2') format('woff2'), 
-    url('../font/PretendardGov/woff/PretendardGov-Thin.woff') format('woff');
+    url('../font/PretendardGov/woff2/PretendardGOV-Thin.woff2') format('woff2'), 
+    url('../font/PretendardGov/woff/PretendardGOV-Thin.woff') format('woff');
 }
 
 /*SourceSerif -수학 문항용 숫자 폰트 / 질문, 예문, 보기, 해설에만 사용-*/
