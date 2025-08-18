@@ -1006,8 +1006,44 @@ input[type="chekbox"] + .cardWrap:before {display:none;}
 /* 끌어놓기 type13 :: 기본테이블 */
 .dragWrap.type13 {}
 .dragWrap.type13 .dragAnswerBox {width:100%;}
+.dragWrap.type13 .tbl_basic.type3 thead tr th {font-size:1.1rem;}
 .dragWrap.type13 .tbl_basic.type3 tbody tr td {font-size:clamp(16px, 1.0625vw, 1.0625rem);}
-
+/* 끌어놓기 type14 :: 투명테이블 */
+.dragWrap.type14 {}
+.dragWrap.type14 .dragAnswerBox {display:flex;gap:1rem;}
+.dragWrap.type14 .tbl_basic {margin: 0;}
+.dragWrap.type14 .tbl_basic tbody tr,
+.dragWrap.type14 .tbl_basic.trans tbody tr,
+.dragWrap.type14 .tbl_basic.trans tbody tr:nth-child(even) {background: transparent;}
+.dragWrap.type14 .tbl_basic.trans tbody tr td {padding:2px;border:none;}
+/* 끌어놓기 type15 :: 수학 제곱 */
+.dragWrap.type15 {}
+.dragWrap.type15 .dragAnswerBox {font-size:1.3rem;}
+.dragWrap.type15 .dragAnswerBox .draginput.sm {min-width:3rem;}
+.dragWrap.type15 .dragAnswerBox .math-sup {min-width: initial;min-height: initial;width: 1.5rem;height: 1.5rem;font-size: 1rem;padding: 0;vertical-align: super;}
+.dragWrap.type15 .dragAnswerBox .math-sup.md {width:3rem}
+.dragWrap.type15 .dragAnswerBox .math-sup.big {width:6rem}
+.dragWrap.type15 .dragAnswerBox .math-sup .draggable {line-height: normal;min-width: initial;min-height: initial;margin: 0;padding: 3px 6px;font-size: 1rem;}
+.dragWrap.type15 .dragAnswerBox sup {font-size:1rem;vertical-align:super;}
+.dragWrap.type15 .dragAnswerBox .math-sup:has(.draggable),
+.dragWrap.type15 .dragAnswerBox .math-sup:has(div) {width: auto;}
+.dragWrap.type15 .draggable,
+.dragWrap.type15 .dragAnswerBox,
+.dragWrap.type15 .dragAnswerBox .draginput {font-family: var(--f_ptd_mth);}
+/* 끌어놓기 type16 :: 분수 */
+.dragWrap.type16 {}
+.dragWrap.type16 .dragAnswerBox {font-size:1.2rem;}
+.dragWrap.type16 .fraction {position: relative;gap: .6rem;margin:0}
+.dragWrap.type16 .fraction::after {position:absolute;top:50%;transform:translateY(-50%);content:'';display:block;width:100%;height:1px;background-color:var(--gray_90);}
+.dragWrap.type16 .fraction .draginput_group .draginput {margin: 0 !important;}
+.dragWrap.type16 .draginput {min-width: initial;width:3.5rem;}
+.dragWrap.type16 .dragAnswerBox .draginput:has(.draggable),
+.dragWrap.type16 .dragAnswerBox .draginput:has(div) {width: auto;}
+.dragWrap.type16 .draggable,
+.dragWrap.type16 .dragAnswerBox,
+.dragWrap.type16 .dragAnswerBox .draginput,
+.dragWrap.type16 .dragAnswerBox:has(.fraction),
+.dragWrap.type16 .dragAnswerBox:has(.fraction) .draginput_group {font-family:var(--f_ptd_mth);}
 /*///아래로펼치기///*/
 .seletWrap {font-size:clamp(16px, 1.0625vw, 1.0625rem);font-weight:400;line-height:2;}
 .seletWrap .select,
@@ -1037,6 +1073,11 @@ input[type="chekbox"] + .cardWrap:before {display:none;}
 .seletWrap.type6 .sub_tt {margin-bottom:1rem;}
 .seletWrap.type6 .txt_box {display:flex;gap:1rem;}
 .seletWrap.type6 .txt_box p {line-height:3;}
+/* 아래로펼치기 type7 :: 분수형태 */
+.seletWrap.type7 {font-family: var(--f_ptd_mth);}
+.seletWrap.type7 select, .seletWrap.type7 .select {font-family: var(--f_ptd_mth);}
+.seletWrap.type7 .fraction {position: relative;gap: .8rem;margin:0}
+.seletWrap.type7 .fraction::after {position:absolute;top:50%;transform:translateY(-50%);content:'';display:block;width:100%;height:1px;background-color:var(--gray_95);}
 
 /*///짝연결하기///*/
 .lineWrap {display:flex;justify-content:center;width:100%;max-width:100% !important;font-size:18px;}
