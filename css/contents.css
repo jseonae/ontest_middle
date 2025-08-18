@@ -573,9 +573,9 @@ body.open:has(.grading_wrap .modal) {overflow: initial;}
 .state .tabin .tabin-header > .active::before, 
 .state .tabin .tabin-header > .active::before {content:'';position:absolute;top:-10px;display:block;width:20px;height:20px;border-radius:20px;background:var(--blue_90) url(../images/common/arr_check.svg) no-repeat 50%;}
 .state .tabin .tabin-header > .disable, 
-.state .tabin .tabin-header > .disable{color:var(--gray_50);border-color:var(--gray_60);background:var(--gray_20)}
+.state .tabin .tabin-header > .disable{ border-color:var(--gray_30);background:var(--gray_10)}
 .state .info_box{display:flex;flex-direction:row;margin-bottom:40px;border:1px solid var(--gray_50);border-radius:8px;}
-.state .info_box .item_subject{display:block;padding:40px;background:var(--gray_20);border-radius:8px 0 0 8px;}
+.state .info_box .item_subject{display:block;padding:40px;border-radius:8px 0 0 8px;background:var(--gray_5);}
 .state .info_box .item_subject .tit{display:flex;align-items:center;}
 .state .info_box .item_subject .subject_list{width:100%;padding-top:20px;font-weight:400;}
 .state .info_box .item_subject .subject_list li{padding:4px 0}
@@ -655,8 +655,13 @@ body.open:has(.grading_wrap .modal) {overflow: initial;}
 .state .qinfo_wrap .answerwrap li.correct .graph{background:var(--blue_70)}
 .state .qinfo_wrap .answerwrap li span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:1rem;text-align:left;font-weight:400;color:var(--gray_50);}
 .state .comment_wrap {display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;border-radius:20px;margin:0 0 40px;padding:2rem 4rem;border:1px solid var(--gray_40);}
-.state .comment_wrap > b {padding:4px;border-radius:4px;border:1px solid var(--gray_40);font-size:15px;color:var(--gray_70);font-weight:normal}
-.state .comment_wrap .comment {font-size:15px;color:var(--gray_90);text-align:left;}
+.state .comment_wrap > b {padding:4px;border-radius:4px;border:1px solid var(--gray_40);font-size:15px;color:var(--gray_70);}
+.state .comment_wrap .comment {font-size:16px;text-align:left;}
+
+.state .comment_wrap.mathSubject .comment {font-family:var(--f_ptd_mth);} /*수학일때*/
+
+
+
 /*회차별 평가문항정보 테이블 토글*/
 .test_item {height:69px;}
 .test_item .btnView {display:inline-flex;width:32px;height:32px;font-size:0;}
