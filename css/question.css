@@ -582,12 +582,12 @@ input[type="radio"] + .cardWrap:before,
 input[type="chekbox"] + .cardWrap:before {display:none;}
 .cardBox {display:flex;justify-content:center;gap:.5rem .2rem;padding:18px;border:0.0625rem solid var(--gray_20);border-radius:6px;background-color:#fff;}
 .cardBox:has(.fraction) {justify-content:center;gap:.5rem !important;}
-.cardBox > p {flex:1;font-size:clamp(16px, 1.0625vw, 1.0625rem);line-height:1.5;margin-top:4px;}
+.cardBox > p {flex:0;font-size:clamp(16px, 1.0625vw, 1.0625rem);line-height:1.5;margin-top:4px;}
 .cardBox.photo {flex-wrap:wrap;align-items:center;gap:.8rem;padding:14px;}
 .cardBox.photo p {margin:0}
 .cardBox.photo p .bullet {vertical-align: initial;}
 .cardBox.photo.flex-col p {text-align:center;}
-.cardBox .photoBox {width: 100%;overflow:hidden;}
+.cardBox .photoBox {width:100%;overflow:hidden;}
 .cardBox .photoBox > img {width:100%;height:100%;}
 .cardBox.magazine {align-items:center;width:initial;padding:0;border:none;background:transparent;}
 .cardBox.magazine .magazine_tt {font-weight:700;text-align:center;font-size:clamp(16px, 1.0625vw, 1.0625rem);}
@@ -601,6 +601,7 @@ input[type="chekbox"] + .cardWrap:before {display:none;}
 .cardBox.photo.flex-col2 .photoBox {flex:2;}
 .cardBox.photo.flex-col2 .photoBox img {max-height:320px;}
 .cardBox.photo.flex-col2 p {flex:.5;}
+.cardBox.photo.flex-row .photoBox {width:auto}
 /* 숫자카드 */
 .numcard_box {display:flex;flex-direction:column;gap:.2rem;}
 .numcard_tr {display:flex;gap:.2rem;}
@@ -1481,6 +1482,7 @@ input[type="chekbox"] + .cardWrap:before {display:none;}
 .field li .linkCon .FL-tt {display:inline-block;width:calc(100% - 15px);max-width:600px;font-size:clamp(16px, 1.0625vw, 1.0625rem);word-break:keep-all;}
 .field li .linkCon .FL-tt:has(.cardBox) {width:initial;}
 .field li .linkCon .FL-tt:has(.cardBox) .cardBox .photoBox {min-height:initial;}
+.field li .linkCon .FL-tt:has(.cardBox.flex-row) .cardBox .photoBox {width:auto;}
 .field li .linkCon .FL-tt > img {max-width:calc(100% - 25px);}
 .field li .linkCon .FL-tt > .bullet,
 .field li .linkCon .FL-tt > .bullet.sm {display:inline-block;border:none;background:transparent;width:initial;height:initial;font-weight:400;font-size: clamp(16px,1vw,1rem)!important;margin:0;vertical-align:baseline;color:var(--gray_90);border-radius:initial;}
