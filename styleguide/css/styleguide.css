@@ -13,7 +13,7 @@
 .stwrap h3 {color:var(--blue_100)}
 
 .stwrap > .inner {width:100%;border-radius:0;}
-.stwrap .q_layout {gap:1rem;width:100%;min-height:initial;padding:0;}
+.stwrap .q_layout {gap:1rem;width:100%;min-height:initial;padding:0;overflow: initial;}
 .stwrap.q_layout {min-height:initial;}
 .stwrap.q_layout .q_wrap .layout.colum_2 {}
 .stwrap.q_layout .q_wrap .layout > div {height:200px;background-color:var(--blue_100);}

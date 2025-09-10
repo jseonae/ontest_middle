@@ -20,6 +20,7 @@ html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,a,abbr,address,cite,em,img,strong,
 	vertical-align:baseline;
 	font-family:var(--f_ptd);
 	color: var(--gray_90);
+	font-weight: 400;
 }
 img {vertical-align: middle;}
 
