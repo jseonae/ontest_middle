@@ -112,4 +112,10 @@ $(document).ready(function(){
 
 });
 
-
+// top_btn
+$(function () {
+    $('.btn_top').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, 300);
+    });
+});
