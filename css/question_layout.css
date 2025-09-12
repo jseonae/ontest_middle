@@ -87,3 +87,47 @@
     #question_footer .q_footer {padding:0 1rem;}
 }
 
+
+/*///////////////////////////////////////////////////////////////*/
+/*////////////////미리보기 안에 문항 별도 스타일///////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+.prev_box .q_layout .a_wrap {padding-bottom:1rem;}
+.prev_box .q_layout .a_wrap > div {max-width:766px;}
+
+.prev_box .bgBox {max-width:660px;min-width:initial;}
+.prev_box .bgBox .bgCont {padding:2rem}
+.prev_box .bgBox .bgCont * {font-size: 1rem;}
+.prev_box .bgBox.book .bgCont {padding: 2rem 3rem;background-size: 100%;}
+.prev_box .bgBox.book::before {height: 23px;background-size: 100%;}
+.prev_box .bgBox.book::after {height: 45px;background-size: 100%;}
+.prev_box .cardBox_flow {align-items:flex-start;}
+
+.prev_box .searchCon ul li {width:calc(50% - .5rem);}
+
+.prev_box .vodBox,
+.prev_box .vodBox iframe,
+.prev_box .adoBox,
+.prev_box .adoBox audio {pointer-events:painted;}
+
+.prev_box .imgBox img:first-child:nth-last-child(1),
+.prev_box .imgBox img:first-child:nth-last-child(1) ~ img {max-width:600px;}
+.prev_box .imgBox img:first-child:nth-last-child(2),
+.prev_box .imgBox img:first-child:nth-last-child(2) ~ img {max-width:340px;}
+.prev_box .imgBox img:first-child:nth-last-child(3),
+.prev_box .imgBox img:first-child:nth-last-child(3) ~ img {max-width:230px;}
+.prev_box .imgBox img:first-child:nth-last-child(4),
+.prev_box .imgBox img:first-child:nth-last-child(4) ~ img {max-width:170px;}
+.prev_box .imgBox img:first-child:nth-last-child(5),
+.prev_box .imgBox img:first-child:nth-last-child(5) ~ img {max-width:130px;}
+
+/*끌어놓기*/
+.prev_box .a_wrap .dragWrap {margin-top:1rem;}
+.prev_box .a_wrap .dragWrap.type9 .dragAnswerBox .dragmark_group li {width:58px;height:58px;font-size:2.5rem;}
+/*짝연결*/
+.prev_box .lineWrap * {font-size:1rem !important;}
+.prev_box .field {gap:0}
+.prev_box .field li .linkCon .FL-tt {max-width:300px;}
+.prev_box .lineWrap .canvasWrap {width:5%;}
+.prev_box .lineWrap:has(img) .linkList > li {min-height:70px;}
+.prev_box .field li .linkCon .FL-tt:has(.cardBox) {width:calc(90% - 30px);}
+.prev_box .field li .linkCon .FL-tt > img {max-width:calc(80% - 25px);}
