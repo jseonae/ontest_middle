@@ -114,11 +114,11 @@
 	--information_95 : #021A2C;
 
 	/* graphic - color */
-	--information_10 : #E5ECF9;
-	--information_30 : #98ACC5;
-	--information_50 : #61758F;
-	--information_70 : #39506C;
-	--information_90 : #223A58;
+	--graphic_10 : #E5ECF9;
+	--graphic_30 : #98ACC5;
+	--graphic_50 : #61758F;
+	--graphic_70 : #39506C;
+	--graphic_90 : #223A58;
 
 	/* graph - color */
 	--graph-yellow : #FFCF33;
