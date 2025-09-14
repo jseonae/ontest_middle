@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온평가 - 교육 평가 플랫폼</title>
-    <!-- <link rel="stylesheet" href="/dashboard/css/index.css"> -->
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/_variables.css">
+    <link rel="stylesheet" href="/css/_font.css">
+    <link rel="stylesheet" href="/css/_button.css">
+    
+
     <link rel="stylesheet" href="/dashboard/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +23,7 @@
             <div class="top-section">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="data:image/svg+xml,%3Csvg preserveAspectRatio%3D%22none%22 width%3D%22100%25%22 height%3D%22100%25%22 overflow%3D%22visible%22 style%3D%22display%3A block%3B%22 viewBox%3D%220 0 126 32%22 fill%3D%22none%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg id%3D%22Group 41%22%3E%0A%3Cg id%3D%22Group 36%22%3E%0A%3Cpath id%3D%22Vector%22 d%3D%22M16.0035 26.4344H5.91774V24.344H21.0501V19.7736H12.9695V19.0618C12.1885 19.2716 11.3699 19.3914 10.5213 19.3914C9.67267 19.3914 8.85409 19.2716 8.07307 19.0618V19.7736H-1.57275e-05V24.344H1.02132V27.7006C1.02132 28.5772 1.29919 29.3714 1.89247 30.0083C2.52329 30.6976 3.3644 31.0048 4.31064 31.0048H15.8833C15.3576 30.4129 15.0347 29.6412 15.0347 28.787C15.0347 27.8729 15.4027 27.0413 16.0035 26.4344Z%22 fill%3D%22white%22%2F%3E%0A%3Cpath id%3D%22Vector_2%22 d%3D%22M21.5441 28.819C21.5441 30.2652 20.3892 31.4389 18.9662 31.4389C17.5432 31.4389 16.3883 30.2652 16.3883 28.819C16.3883 27.3728 17.5432 26.1991 18.9662 26.1991C20.3892 26.1991 21.5441 27.3728 21.5441 28.819Z%22 fill%3D%22white%22%2F%3E%0A%3Cpath id%3D%22Vector_3%22 d%3D%22M13.5253 9.75596C13.5253 11.4043 12.1886 12.7455 10.5289 12.7455C8.86921 12.7455 7.53246 11.4118 7.53246 9.75596C7.53246 8.10012 8.86921 6.76646 10.5289 6.76646C12.1886 6.76646 13.5253 8.10012 13.5253 9.75596Z%22 fill%3D%22white%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E" alt="온평가 로고" />
+                        <img src="/dashboard/images/logo_white.svg" alt="온평가 중등" />
                     </div>
                 </div>
                 <div class="subjects-title">
@@ -31,75 +37,38 @@
                 <div class="nav-container">
                     <div class="menu-item">
                         <div class="menu-content">
-                            <div class="menu-icon">
-                                <svg width="20" height="20" viewBox="0 0 18 16" fill="none">
-                                    <path d="M14.0985 10.5194V12.6569C14.0985 13.0673 14.0176 13.4736 13.8606 13.8528C13.7035 14.2319 13.4734 14.5764 13.1832 14.8666C12.893 15.1568 12.5485 15.387 12.1694 15.544C11.7902 15.7011 11.3839 15.7819 10.9735 15.7819H5.97347C5.14467 15.7819 4.34981 15.4527 3.76376 14.8666C3.17771 14.2806 2.84847 13.4857 2.84847 12.6569V10.3757L4.09847 11.1007L6.84847 12.7069C7.38054 13.0141 7.98409 13.1758 8.59847 13.1758C9.21285 13.1758 9.8164 13.0141 10.3485 12.7069L12.8485 11.2507L14.0985 10.5194Z" fill="white"/>
-                                    <path d="M17.2234 5.96901C17.2233 6.35994 17.119 6.74378 16.9213 7.08103C16.7236 7.41827 16.4395 7.69673 16.0985 7.88776L9.6922 11.6378C9.35206 11.8341 8.96621 11.9375 8.57345 11.9375C8.18069 11.9375 7.79484 11.8341 7.4547 11.6378L1.09845 7.88776C0.764009 7.6914 0.486698 7.41105 0.294013 7.07448C0.101327 6.73791 -4.07235e-05 6.35683 -4.07235e-05 5.96901C-4.07235e-05 5.58119 0.101327 5.2001 0.294013 4.86353C0.486698 4.52697 0.764009 4.24661 1.09845 4.05026L7.5047 0.300256C7.84484 0.103875 8.23069 0.000488237 8.62345 0.000488237C9.01621 0.000488237 9.40206 0.103875 9.7422 0.300256L16.0985 4.05026C16.4391 4.24178 16.7228 4.52036 16.9204 4.85749C17.1181 5.19462 17.2227 5.5782 17.2234 5.96901Z" fill="white"/>
-                                    <path d="M17.2235 12.6567C17.2235 12.9883 17.0918 13.3062 16.8574 13.5406C16.6229 13.775 16.305 13.9067 15.9735 13.9067C15.6419 13.9067 15.324 13.775 15.0896 13.5406C14.8552 13.3062 14.7235 12.9883 14.7235 12.6567C14.7248 12.4386 14.7832 12.2246 14.8928 12.036C15.0025 11.8474 15.1595 11.6908 15.3485 11.5817V9.78799L16.5985 9.06299V11.563C16.7902 11.6736 16.949 11.8332 17.0588 12.0254C17.1686 12.2175 17.2255 12.4354 17.2235 12.6567V12.6567Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-icon menu1"></i>
                             <span class="menu-text">학급관리</span>
                         </div>
                     </div>
 
                     <div class="menu-item menu-expandable">
                         <div class="menu-content">
-                            <div class="menu-icon">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M18.3333 4.04181V13.9501C18.3333 14.7585 17.675 15.5001 16.8667 15.6001L16.6083 15.6335C15.2417 15.8168 13.3167 16.3835 11.7667 17.0335C11.225 17.2585 10.625 16.8501 10.625 16.2585V4.66681C10.625 4.35848 10.8 4.07515 11.075 3.92515C12.6 3.10015 14.9083 2.36681 16.475 2.23348H16.525C17.525 2.23348 18.3333 3.04181 18.3333 4.04181Z" fill="white"/>
-                                    <path d="M8.92499 3.92515C7.39999 3.10015 5.09166 2.36681 3.52499 2.23348H3.46666C2.46666 2.23348 1.65833 3.04181 1.65833 4.04181V13.9501C1.65833 14.7585 2.31666 15.5001 3.12499 15.6001L3.38333 15.6335C4.74999 15.8168 6.67499 16.3835 8.22499 17.0335C8.76666 17.2585 9.36666 16.8501 9.36666 16.2585V4.66681C9.36666 4.35015 9.19999 4.07515 8.92499 3.92515ZM4.16666 6.45015H6.04166C6.38333 6.45015 6.66666 6.73348 6.66666 7.07515C6.66666 7.42515 6.38333 7.70015 6.04166 7.70015H4.16666C3.82499 7.70015 3.54166 7.42515 3.54166 7.07515C3.54166 6.73348 3.82499 6.45015 4.16666 6.45015ZM6.66666 10.2001H4.16666C3.82499 10.2001 3.54166 9.92515 3.54166 9.57515C3.54166 9.23348 3.82499 8.95015 4.16666 8.95015H6.66666C7.00833 8.95015 7.29166 9.23348 7.29166 9.57515C7.29166 9.92515 7.00833 10.2001 6.66666 10.2001Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-icon menu2"></i>
                             <span class="menu-text">문제은행</span>
-                            <div class="menu-arrow">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M11.9076 5.57132C12.2339 5.254 12.7624 5.254 13.0887 5.57132C13.4149 5.88864 13.4149 6.40276 13.0887 6.72008L8.59051 11.0953C8.26428 11.4127 7.73573 11.4127 7.40949 11.0953L2.91134 6.72008C2.58511 6.40276 2.58511 5.88864 2.91134 5.57132C3.23757 5.254 3.76612 5.254 4.09236 5.57132L8 9.37222L11.9076 5.57132Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-arrow"></i>
                         </div>
                     </div>
 
                     <div class="menu-item menu-expandable">
                         <div class="menu-content">
-                            <div class="menu-icon">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10.5648 16.6308C10.7938 16.6841 10.8147 16.9839 10.5917 17.0583V17.0583L9.27508 17.4916C5.96675 18.5583 4.22508 17.6666 3.15008 14.3583L2.08341 11.0666C1.01675 7.75827 1.90008 6.00827 5.20841 4.9416L5.64508 4.79699C5.9808 4.68581 6.30752 5.02253 6.21219 5.36309C6.16494 5.5319 6.11948 5.70807 6.07508 5.8916L5.25841 9.38327C4.34175 13.3083 5.68341 15.4749 9.60841 16.4083L10.5648 16.6308Z" fill="white"/>
-                                    <path d="M14.3083 2.67501L12.9166 2.35001C10.1333 1.69167 8.47495 2.23334 7.49995 4.25001C7.24995 4.75834 7.04995 5.37501 6.88328 6.08334L6.06661 9.57501C5.24995 13.0583 6.32495 14.775 9.79995 15.6L11.1999 15.9333C11.6833 16.05 12.1333 16.125 12.5499 16.1583C15.1499 16.4083 16.5333 15.1917 17.2333 12.1833L18.0499 8.70001C18.8666 5.21667 17.7999 3.49167 14.3083 2.67501ZM12.7416 11.1083C12.6666 11.3917 12.4166 11.575 12.1333 11.575C12.0833 11.575 12.0333 11.5667 11.9749 11.5583L9.54995 10.9417C9.21661 10.8583 9.01661 10.5167 9.09995 10.1833C9.18328 9.85001 9.52495 9.65001 9.85828 9.73334L12.2833 10.35C12.6249 10.4333 12.8249 10.775 12.7416 11.1083ZM15.1833 8.29167C15.1083 8.57501 14.8583 8.75834 14.5749 8.75834C14.5249 8.75834 14.4749 8.75001 14.4166 8.74167L10.3749 7.71667C10.0416 7.63334 9.84161 7.29167 9.92495 6.95834C10.0083 6.62501 10.3499 6.42501 10.6833 6.50834L14.7249 7.53334C15.0666 7.60834 15.2666 7.95001 15.1833 8.29167Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-icon menu3"></i>
                             <span class="menu-text">출제내역</span>
-                            <div class="menu-arrow">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M11.9076 5.57132C12.2339 5.254 12.7624 5.254 13.0887 5.57132C13.4149 5.88864 13.4149 6.40276 13.0887 6.72008L8.59051 11.0953C8.26428 11.4127 7.73573 11.4127 7.40949 11.0953L2.91134 6.72008C2.58511 6.40276 2.58511 5.88864 2.91134 5.57132C3.23757 5.254 3.76612 5.254 4.09236 5.57132L8 9.37222L11.9076 5.57132Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-arrow"></i>
                         </div>
                     </div>
 
                     <div class="menu-item menu-expandable">
                         <div class="menu-content">
-                            <div class="menu-icon">
-                                <svg width="20" height="20" viewBox="0 0 17 18" fill="none">
-                                    <path d="M15.833 11.667C15.8329 12.5873 15.0872 13.3338 14.167 13.334H8.95801V16.667C8.95792 17.0121 8.67813 17.292 8.33301 17.292C7.988 17.2919 7.70809 17.012 7.70801 16.667V13.334H2.5C1.57958 13.334 0.833095 12.5874 0.833008 11.667V3.75H15.833V11.667ZM11.9883 6.13086C11.6923 5.95327 11.3085 6.04972 11.1309 6.3457L10.2285 7.84863C9.92045 8.36174 9.19525 8.41064 8.82129 7.94336C7.90314 6.79567 6.1224 6.91547 5.36621 8.17578L4.46387 9.67871C4.28632 9.97469 4.38274 10.3586 4.67871 10.5361C4.9746 10.7135 5.35853 10.618 5.53613 10.3223L6.4375 8.81836C6.74546 8.30532 7.47067 8.2567 7.84473 8.72363C8.76288 9.87133 10.5446 9.75152 11.3008 8.49121L12.2021 6.98828C12.3797 6.69231 12.2842 6.30846 11.9883 6.13086ZM15.417 0C16.1072 0.000175527 16.667 0.559752 16.667 1.25C16.667 1.94025 16.1072 2.49982 15.417 2.5H1.25C0.559644 2.5 4.83195e-08 1.94036 0 1.25C0 0.559644 0.559644 0 1.25 0H15.417Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-icon menu4"></i>
                             <span class="menu-text">평가현황</span>
-                            <div class="menu-arrow">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M11.9076 5.57132C12.2339 5.254 12.7624 5.254 13.0887 5.57132C13.4149 5.88864 13.4149 6.40276 13.0887 6.72008L8.59051 11.0953C8.26428 11.4127 7.73573 11.4127 7.40949 11.0953L2.91134 6.72008C2.58511 6.40276 2.58511 5.88864 2.91134 5.57132C3.23757 5.254 3.76612 5.254 4.09236 5.57132L8 9.37222L11.9076 5.57132Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-arrow"> </i>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-content">
-                            <div class="menu-icon">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M15.8047 1.83448H3.19525C1.43056 1.83448 0 3.2775 0 5.05757V17.7769C0 19.557 1.43056 21 3.19525 21H15.8047C17.5694 21 19 19.557 19 17.7769V5.05757C19 3.2775 17.5694 1.83448 15.8047 1.83448Z" fill="white"/>
-                                    <path d="M12.8844 0H6.11782C5.53486 0 5.06227 0.476705 5.06227 1.06475V2.92363C5.06227 3.51168 5.53486 3.98838 6.11782 3.98838H12.8844C13.4673 3.98838 13.9399 3.51168 13.9399 2.92363V1.06475C13.9399 0.476705 13.4673 0 12.8844 0Z" fill="white"/>
-                                </svg>
-                            </div>
+                            <i class="menu-icon menu5"></i>
                             <span class="menu-text">빅데이터</span>
                         </div>
                     </div>
@@ -150,8 +119,8 @@
                     <!-- Left Content -->
                     <div class="left-contents">
                         <!-- Section 1 - Stats Cards -->
-                        <section class="section-1">
-                            <div class="stats-card card-scoring">
+                        <section class="section section-1">
+                            <div class="card-box stats-card card-scoring">
                                 <div class="card-content">
                                     <div class="card-header">
                                         <div class="card-title">
@@ -178,7 +147,7 @@
                                 </div>
                             </div>
 
-                            <div class="stats-card card-recent">
+                            <div class="card-box stats-card card-recent">
                                 <div class="card-content">
                                     <div class="card-header">
                                         <div class="card-title">
@@ -203,7 +172,7 @@
                                 </div>
                             </div>
 
-                            <div class="stats-card card-average">
+                            <div class="card-box stats-card card-average">
                                 <div class="card-content">
                                     <div class="card-header">
                                         <div class="card-title-section">
@@ -254,12 +223,12 @@
                         </section>
 
                         <!-- Section 2 - Charts -->
-                        <section class="section-2">
-                            <div class="chart-card">
+                        <section class="section section-2">
+                            <div class="card-box chart-card">
                                 <div class="chart-header">
                                     <h3>회차별 학급 평균점수</h3>
                                     <div class="select-box">
-                                        <select>
+                                        <select class="select">
                                             <option>1학년 1반</option>
                                         </select>
                                     </div>
@@ -308,11 +277,11 @@
                                 </div>
                             </div>
 
-                            <div class="achievement-card">
+                            <div class="card-box achievement-card">
                                 <div class="achievement-header">
                                     <h3>학업 성취도율 변화</h3>
                                     <div class="select-box">
-                                        <select>
+                                        <select class="select">
                                             <option>1학년</option>
                                         </select>
                                     </div>
@@ -357,7 +326,7 @@
                         </section>
 
                         <!-- Section 3 - Shared Materials -->
-                        <section class="section-3">
+                        <section class="section-3 card-box">
                             <div class="shared-materials">
                                 <div class="materials-header">
                                     <div class="materials-intro">
@@ -432,7 +401,7 @@
                     <!-- Right Content -->
                     <div class="right-contents">
                         <!-- Section 4 - Rankings and Wrong Answer Notes -->
-                        <section class="section-4">
+                        <section class="section-4 card-box">
                             <div class="rankings-section">
                                 <div class="rankings-header">
                                     <div class="rankings-title">
@@ -488,12 +457,12 @@
                             <div class="wrong-answer-notes">
                                 <div class="notes-header">
                                     <h3>담당학급 오답노트</h3>
-                                    <div class="filter-dropdown">
-                                        <span>전체</span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                            <path d="M9.86718 4.20252C10.0314 4.3503 10.0447 4.60321 9.89694 4.76743L6.29734 8.76743C6.22148 8.85172 6.11341 8.89985 6.00001 8.89986C5.88662 8.89986 5.77855 8.85173 5.70269 8.76744L2.10269 4.76744C1.9549 4.60324 1.96821 4.35032 2.13242 4.20254C2.29662 4.05476 2.54954 4.06807 2.69732 4.23227L5.99999 7.9019L9.30228 4.23229C9.45006 4.06808 9.70297 4.05475 9.86718 4.20252Z" fill="#33363D"/>
-                                        </svg>
-                                    </div>
+                                    <select class="select trans">
+                                        <option selected>전체</option>
+                                        <option>1학년</option>
+                                        <option>2학년</option>
+                                        <option>3학년</option>
+                                    </select>
                                 </div>
                                 <div class="notes-grid">
                                     <div class="note-card blue">
@@ -501,7 +470,7 @@
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">2</div>
                                     </div>
-                                    <div class="note-card red">
+                                    <div class="note-card red selceted">
                                         <div class="note-header">1학년 2반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">1</div>
@@ -575,9 +544,9 @@
                 <div class="footer-container">
                     <div class="footer-links">
                         <a href="#">이용약관</a>
-                        <span class="separator">|</span>
+                        <span class="separator"></span>
                         <a href="#">이메일무단수집거부</a>
-                        <span class="separator">|</span>
+                        <span class="separator"></span>
                         <a href="#" class="privacy">개인정보처리방침</a>
                     </div>
                     <div class="footer-info">
@@ -587,7 +556,7 @@
                             <p class="copyright">Copyright ⓒ 2025 edus충남. All Rights Reserved.</p>
                         </div>
                         <div class="related-sites">
-                            <select>
+                            <select class="select type2">
                                 <option>관련사이트</option>
                             </select>
                         </div>
