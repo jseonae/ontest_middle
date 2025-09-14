@@ -1342,6 +1342,8 @@ button {
     width: 100%;
     position: relative;
     border: 1px solid;
+    padding: 32px;
+    display: flex;
 }
 
 .banner.orange {
@@ -1357,17 +1359,14 @@ button {
 .banner-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: flex-start;
-    padding: 32px 44px;
     width: 100%;
 }
 
 .banner-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    width: 327px;
 }
 
 .banner-text {
