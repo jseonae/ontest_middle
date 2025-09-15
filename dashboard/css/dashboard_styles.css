@@ -161,10 +161,9 @@
 .score-badge.green {border-color:var(--success_40);color:var(--success_50);}
 
 /* Section 2 - Charts */
-.section-2 {display:flex;gap:20px;width:00%;height:00%;max-height:394px;}
+.section-2 {display:flex;gap:20px;width:100%;height:100%;max-height:394px;}
 .section-2 .select {min-width:7rem;}
-
-.chart-wrap {width:alc(50% - .625rem);gap:.35rem;}
+.chart-wrap {width:calc(50% - .625rem);gap:.35rem;}
 .chart-card .card-content,
 .achievement-card .card-content {display:flex;flex-direction:column;gap:32px;align-items:center;padding:36px;width:100%;}
 
