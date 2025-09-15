@@ -22,7 +22,7 @@
         <div class="sidebar">
             <div class="top-section">
                 <div class="logo-container">
-                    <a class="logo" href="/dashboard/index2.html" title="홈으로" target="_self">
+                    <a class="logo" href="/dashboard/index.html" title="홈으로" target="_self">
                         <img src="/dashboard/images/logo_white.svg" alt="온평가 중등" />
                     </a>
                 </div>
@@ -131,12 +131,12 @@
                                         <div class="card-stats">
                                             <span class="card-box-label">대기중</span>
                                             <div class="count-wrap">
-                                                <span class="count">00</span>
+                                                <span class="count data-zero">00</span>
                                                 <span class="unit">건</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="action-btn disabled">채점하러가기 <i class="icon"></i></a>
+                                    <a href="#" class="action-btn disabled" disabled>채점하러가기 <i class="icon"></i></a>
                                 </div>
                             </div>
 
@@ -150,7 +150,7 @@
                                         <div class="card-stats">
                                             <span class="card-box-label">완료</span>
                                             <div class="count-wrap">
-                                                <span class="count">00</span>
+                                                <span class="count data-zero">00</span>
                                                 <span class="unit">건</span>
                                             </div>
                                         </div>
@@ -174,38 +174,20 @@
                                             <div class="average-info">
                                                 <span class="card-box-label">전체 평균 점수</span>
                                                 <div class="average-score">
-                                                    <span class="score">00</span>
+                                                    <span class="score data-zero">00</span>
                                                     <span class="unit">점</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="class-comparison">
-                                            <div class="overlay-message">
-                                                <div class="message-content">
-                                                    <div class="message-title">평가 자료가 부족합니다.</div>
-                                                    <div class="message-subtitle">1개 학급 이상 평가완료 후 결과가 나타납니다.</div>
+                                            <!--overlay-empty-->
+                                            <div class="overlay-empty overlay-message">
+                                                <div class="content-box">
+                                                    <strong class="overlay-title">평가 자료가 부족합니다.</strong>
+                                                    <p class="overlay-subtitle">1개 학급 이상 평가완료 후 결과가 나타납니다.</p>
                                                 </div>
                                             </div>
-                                            <!-- <div class="comparison-item top-class">
-                                                <div class="comparison-header">
-                                                    <i class="arrow-icon up"></i>
-                                                    <span>상위 학급</span>
-                                                </div>
-                                                <div class="comparison-content">
-                                                    <span class="class-name">1학년 3반</span>
-                                                    <div class="score-badge blue">48.67</div>
-                                                </div>
-                                            </div>
-                                            <div class="comparison-item bottom-class">
-                                                <div class="comparison-header">
-                                                    <i class="arrow-icon down"></i>
-                                                    <span>하위 학급</span>
-                                                </div>
-                                                <div class="comparison-content">
-                                                    <span class="class-name">1학년 2반</span>
-                                                    <div class="score-badge green">38.6</div>
-                                                </div>
-                                            </div> -->
+                                            <!-- comparison-item 과 동일 위치-->
                                         </div>
                                     </div>
                                 </div>
@@ -224,7 +206,14 @@
                                     </div>
                                 </div>
                                 <div class="chart-content average">
-                                    <canvas id="averageChart"></canvas>
+                                    <!--overlay-empty-->
+                                    <div class="overlay-empty overlay-average">
+                                        <div class="content-box">
+                                            <strong class="overlay-title">평가 자료가 없습니다.</strong>
+                                            <p class="overlay-subtitle">1회차 이상 평가완료 후 그래프가 나타납니다.</p>
+                                        </div>
+                                    </div>
+                                    <!-- averageChart 동일 위치-->
                                 </div>
                             </div>
 
@@ -241,21 +230,21 @@
                                     <div class="achievement-info">
                                         <span class="card-box-label">총 응시학생수</span>
                                         <div class="count-wrap">
-                                            <span class="count">42</span>
+                                            <span class="count data-zero">00</span>
                                             <span class="unit">명</span>
                                         </div>
                                     </div>
-                                    <div class="legend">
-                                        <div class="legend-item"><span class="color-dot yellow"></span>1반</div>
-                                        <div class="legend-item"><span class="color-dot blue"></span>2반</div>
-                                        <div class="legend-item"><span class="color-dot red"></span>3반</div>
-                                        <div class="legend-item"><span class="color-dot purple"></span>4반</div>
-                                        <div class="legend-item"><span class="color-dot teal"></span>5반</div>
-                                        <div class="legend-item"><span class="color-dot orange"></span>6반</div>
-                                    </div>
+                                    <!--차트가 없으므로 legend도 없음-->
                                 </div>
                                 <div class="chart-content achievement">
-                                    <canvas id="achievementChart"></canvas>
+                                    <!--overlay-empty-->
+                                    <div class="overlay-empty overlay-achievement">
+                                        <div class="content-box">
+                                            <strong class="overlay-title">평가 자료가 없습니다.</strong>
+                                            <p class="overlay-subtitle">1개 학급 이상 평가완료 후 그래프가 나타납니다.</p>
+                                        </div>
+                                    </div>
+                                    <!-- achievementChart 동일 위치-->
                                 </div>
                             </div>
                         </section>
@@ -271,20 +260,20 @@
                                         <div class="intro-text">
                                             <h3>우리 교실 평가자료, <span class="block">같이 써요! <a href="#" title="더보기" target="_self" class="more-btn"><span class="sr-only">공유자료 더보기</span></a></span></h3>
                                             <div class="media-controls">
-                                                <button class="control-btn play"><span class="sr-only">시작</span></button>
-                                                <button class="control-btn pause on"><span class="sr-only">일시정지</span></button>
+                                                <button class="control-btn play on"><span class="sr-only">시작</span></button>
+                                                <button class="control-btn pause"><span class="sr-only">일시정지</span></button>
                                                 <button class="control-btn prev"><span class="sr-only">이전</span></button>
                                                 <button class="control-btn next"><span class="sr-only">다음</span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="materials-list"> <!--material-card에 selecteds 지우기-->
-                                    <a class="material-card" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
+                                <div class="materials-list"> 
+                                    <a class="material-card" href="#" title="[샘플자료] 국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
                                             <em class="card-date">2025-07-04</em>
                                             <div class="tit">
-                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span>[샘플자료] 국어 1학년 1학기 단원평가지 말하기</span>
                                                 <span class="new-badge">N</span>
                                             </div>
                                         </div>
@@ -293,12 +282,12 @@
                                             <span class="tag subject">말하기·쓰기</span>
                                             <span class="tag subject">읽기</span>
                                         </div>
-                                    </a>
-                                    <a class="material-card selected" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
+                                    </a><!--material-card에 selecteds 지우기-->
+                                    <a class="material-card selected" href="#" title="[샘플자료] 국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
                                             <em class="card-date">2025-07-04</em>
                                             <div class="tit">
-                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span>[샘플자료] 국어 1학년 1학기 단원평가지 말하기</span>
                                                 <span class="new-badge">N</span>
                                             </div>
                                         </div>
@@ -307,11 +296,11 @@
                                             <span class="tag subject">말하기·쓰기</span>
                                         </div>
                                     </a>
-                                    <a class="material-card" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
+                                    <a class="material-card" href="#" title="[샘플자료] 국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
                                             <em class="card-date">2025-07-04</em>
                                             <div class="tit">
-                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span>[샘플자료] 국어 1학년 1학기 단원평가지 말하기</span>
                                                 <span class="new-badge">N</span>
                                             </div>
                                         </div>
@@ -322,11 +311,24 @@
                                             <span class="tag subject">문법</span>
                                         </div>
                                     </a>
-                                    <a class="material-card" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
+                                    <a class="material-card" href="#" title="국[샘플자료] 국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
                                             <em class="card-date">2025-07-04</em>
                                             <div class="tit">
-                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span>[샘플자료] 국어 1학년 1학기 단원평가지 말하기 말하기</span>
+                                                <span class="new-badge">N</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-tags">
+                                            <span class="tag grade">1학년</span>
+                                            <span class="tag subject">말하기·쓰기</span>
+                                        </div>
+                                    </a>
+                                    <a class="material-card" href="#" title="국[샘플자료] 국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
+                                        <div class="card-title">
+                                            <em class="card-date">2025-07-04</em>
+                                            <div class="tit">
+                                                <span>[샘플자료] 국어 1학년 1학기 단원평가지 말하기 말하기</span>
                                                 <span class="new-badge">N</span>
                                             </div>
                                         </div>
@@ -353,46 +355,13 @@
                                     <span class="rankings-subtitle">최근 3개 평가지 기준</span>
                                 </div>
                                 <div class="rankings-list">
-                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1920 문항 보기" target="_self"> 
-                                        <div class="ranking-info">
-                                            <span class="rank">1위</span>
-                                            <span class="code">1-2-4-[9국04-03]-4-1920</span>
-                                            <span class="description">[1국01-01] 말을 잘하자.</span>
+                                    <!--overlay-empty-->
+                                    <div class="overlay-empty overlay-rankings">
+                                        <div class="content-box">
+                                            <p class="overlay-subtitle">오답률 상위 문항 측정을 위해 <span class="block"><b>1회차 이상 평가</b>를 완료해야 합니다.</span></p>
                                         </div>
-                                        <span class="percentage">66%</span>
-                                    </a>
-                                    <a class="ranking-item selected" href="#" title="1-2-4-[9국04-03]-4-1921 문항 보기" target="_self"> <!--실제로는 selected 클래스 빼기 hover 디자인 보려고 쓴거에요.-->
-                                        <div class="ranking-info">
-                                            <span class="rank">2위</span>
-                                            <span class="code">1-2-4-[9국04-03]-4-1921</span>
-                                            <span class="description">[1국01-01] 말을 잘하자.</span>
-                                        </div>
-                                        <span class="percentage">64%</span>
-                                    </a>
-                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1922 문항 보기" target="_self">
-                                        <div class="ranking-info">
-                                            <span class="rank">3위</span>
-                                            <span class="code">1-2-4-[9국04-03]-4-1922</span>
-                                            <span class="description">[1국01-01] 말을 잘하자.</span>
-                                        </div>
-                                        <span class="percentage">62%</span>
-                                    </a>
-                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1923 문항 보기" target="_self">
-                                        <div class="ranking-info">
-                                            <span class="rank">4위</span>
-                                            <span class="code">1-2-4-[9국04-03]-4-1923</span>
-                                            <span class="description">[1국01-01] 말을 잘하자.</span>
-                                        </div>
-                                        <span class="percentage">60%</span>
-                                    </a>
-                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1924 문항 보기" target="_self">
-                                        <div class="ranking-info">
-                                            <span class="rank">5위</span>
-                                            <span class="code">1-2-4-[9국04-03]-4-1924</span>
-                                            <span class="description">[1국01-01] 말을 잘하자.</span>
-                                        </div>
-                                        <span class="percentage">58%</span>
-                                    </a>
+                                    </div>
+                                    <!--ranking-item 동일위치-->
                                 </div>
                             </div>
 
@@ -407,42 +376,15 @@
                                     </select>
                                 </div>
                                 <div class="notes-grid">
-                                    <a class="note-card blue" href="#" title="1학년 1반 오답노트 보기" target="_self">
-                                        <div class="note-header">1학년 1반</div>
-                                        <div class="note-arrow">→</div>
-                                        <div class="note-count">2</div>
-                                    </a>
-                                    <a class="note-card red selceted" href="#" title="1학년 2반 오답노트 보기" target="_self"> <!--실제로는 selceted 클래스 빼기, hover 디자인 보려고 쓴거에요.-->
-                                        <div class="note-header">1학년 2반</div>
-                                        <div class="note-arrow">→</div>
-                                        <div class="note-count">1</div>
-                                    </a>
-                                    <a class="note-card light-blue" href="#" title="1학년 3반 오답노트 보기" target="_self">
-                                        <div class="note-header">1학년 3반</div>
-                                        <div class="note-arrow">→</div>
-                                        <div class="note-count">1</div>
-                                    </a>
-                                    <a class="note-card green" href="#" title="1학년 4반 오답노트 보기" target="_self">
-                                        <div class="note-header">1학년 4반</div>
-                                        <div class="note-arrow">→</div>
-                                        <div class="note-count">0</div>
-                                    </a>
-                                    <a class="note-card yellow" href="#" title="1학년 5반 오답노트 보기" target="_self">
-                                        <div class="note-header">1학년 5반</div>
-                                        <div class="note-arrow">→</div>
-                                        <div class="note-count">0</div>
-                                    </a>
-                                    <a class="note-card purple" href="#" title="1학년 6반 오답노트 보기" target="_self">
-                                        <div class="note-header">1학년 6반</div>
-                                        <div class="note-arrow">→</div>
-                                        <div class="note-count">0</div>
-                                    </a>
+                                    <!--overlay-empty-->
+                                    <div class="overlay-empty overlay-notes">
+                                        <div class="content-box">
+                                            <p class="overlay-subtitle">생성된 학급이 없습니다. <span class="block">학급생성 후 평가를 진행해주세요.</span></p>
+                                        </div>
+                                    </div>
+                                    <!--note-card 동일위치-->
                                 </div>
-                                <div class="carousel-dots">
-                                    <span class="dot active"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                </div>
+                                <!--note-card가 없으므로 carousel-dots도 없음-->
                             </div>
                         </section>
 
@@ -455,7 +397,7 @@
                                     </div>
                                     <h4 class="banner-title">온평가 사용자 매뉴얼 다운로드</h4>
                                 </div>
-                                <a class="banner-btn" href="#" title="다운로드"><span class="sr-only">다운로드</span></a>
+                                <a class="banner-btn button--moema" href="#" title="다운로드"><span class="sr-only">다운로드</span></a>
                             </div>
                             <div class="banner blue">
                                 <div class="banner-content">
@@ -464,7 +406,7 @@
                                     </div>
                                     <h4 class="banner-title">단원별 평가지 샘플 사용해보기</h4>
                                 </div>
-                                <a class="banner-btn" href="#" title="바로가기"><span class="sr-only">바로가기</span></a>
+                                <a class="banner-btn button--moema" href="#" title="바로가기"><span class="sr-only">바로가기</span></a>
                             </div>
                         </section>
                     </div>
