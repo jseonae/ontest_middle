@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온평가 - 교육 평가 플랫폼</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/_reset.css">
     <link rel="stylesheet" href="/css/_variables.css">
     <link rel="stylesheet" href="/css/_font.css">
     <link rel="stylesheet" href="/css/_button.css">
     
+    <link rel="stylesheet" href="/dashboard/css/dashboard_styles.css">
 
-    <link rel="stylesheet" href="/dashboard/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
-    <div class="dashboard-main">
+    <div class="dashboard-main" id="dashboard">
         <!-- Left Sidebar -->
-        <div class="left-sidebar">
+        <div class="sidebar">
             <div class="top-section">
                 <div class="logo-container">
-                    <div class="logo">
+                    <a class="logo" href="/dashboard/index2.html" title="홈으로" target="_self">
                         <img src="/dashboard/images/logo_white.svg" alt="온평가 중등" />
-                    </div>
+                    </a>
                 </div>
                 <div class="subjects-title">
                     <div class="subjects-title-content">
@@ -32,7 +32,6 @@
                     </div>
                 </div>
             </div>
-
             <nav class="nav-section">
                 <div class="nav-container">
                     <div class="menu-item">
@@ -77,7 +76,7 @@
         </div>
 
         <!-- Right Main Content -->
-        <div class="right-content">
+        <div class="container">
             <!-- Header -->
             <header class="main-header">
                 <div class="header-container">
@@ -87,16 +86,8 @@
                             <span class="school-name">충남여자중학교</span>
                         </div>
                         <div class="btn-group">
-                            <button class="icon-btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M10.5848 3.60018C10.5848 3.19603 10.2271 2.81283 9.71545 2.81283H8.2843C7.77261 2.81283 7.415 3.19603 7.41492 3.60018C7.41492 4.88015 6.04522 5.69383 4.92102 5.08187L4.84485 5.04085C4.41034 4.80432 3.86932 4.95659 3.63782 5.33455L2.92151 6.5035C2.70298 6.86038 2.81809 7.33263 3.23499 7.55965C4.37614 8.18085 4.37613 9.81981 3.23499 10.441C2.81809 10.668 2.70298 11.1403 2.92151 11.4972L3.63782 12.6661C3.86932 13.0441 4.41034 13.1963 4.84485 12.9598L4.92102 12.9188C6.04522 12.3068 7.41492 13.1205 7.41492 14.4005C7.415 14.8046 7.77261 15.1878 8.2843 15.1878H9.71545C10.2271 15.1878 10.5848 14.8046 10.5848 14.4005C10.5848 13.1205 11.9545 12.3068 13.0787 12.9188L13.1549 12.9598C13.5894 13.1963 14.1304 13.0441 14.3619 12.6661L15.0782 11.4972C15.2968 11.1403 15.1817 10.668 14.7648 10.441C13.6236 9.81981 13.6236 8.18084 14.7648 7.55965C15.1817 7.33263 15.2968 6.86037 15.0782 6.5035L14.3619 5.33455C14.1304 4.95659 13.5894 4.80433 13.1549 5.04085L13.0787 5.08187C11.9545 5.69384 10.5848 4.88015 10.5848 3.60018ZM10.6874 9.00033C10.6874 8.06835 9.93186 7.31283 8.99988 7.31283C8.0679 7.31283 7.31238 8.06835 7.31238 9.00033C7.31238 9.9323 8.0679 10.6878 8.99988 10.6878C9.93186 10.6878 10.6874 9.93231 10.6874 9.00033ZM11.8124 9.00033C11.8124 10.5536 10.5532 11.8128 8.99988 11.8128C7.44658 11.8128 6.18738 10.5536 6.18738 9.00033C6.18738 7.44703 7.44658 6.18783 8.99988 6.18783C10.5532 6.18783 11.8124 7.44703 11.8124 9.00033Z" fill="#6D7882"/>
-                                </svg>
-                            </button>
-                            <button class="icon-btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M4.85579 2.03712C6.12159 1.1934 7.7827 1.967 8.02962 3.3877H10.4993C11.6383 3.3877 12.5616 4.31132 12.5618 5.4502C12.5617 5.76077 12.3099 6.0127 11.9993 6.0127C11.6889 6.01253 11.437 5.76066 11.4368 5.4502C11.4366 4.93264 11.017 4.5127 10.4993 4.5127H8.06185V13.8877H10.4993C11.017 13.8877 11.4367 13.4679 11.4368 12.9502C11.4371 12.6399 11.689 12.3879 11.9993 12.3877C12.3099 12.3877 12.5616 12.6398 12.5618 12.9502C12.5617 14.0892 11.6384 15.0127 10.4993 15.0127H8.02962C7.78268 16.4334 6.1216 17.2072 4.85579 16.3633L3.35579 15.3643C2.78208 14.9818 2.43693 14.337 2.43685 13.6475V4.75294C2.437 4.06353 2.78218 3.41956 3.35579 3.03712L4.85579 2.03712Z" fill="#6D7882"/>
-                                </svg>
-                            </button>
+                            <a href="#" class="icon-btn mypage" title="나의 정보"><span class="sr-only">나의 정보</span></a>
+                            <a href="#" class="icon-btn logout" title="로그아웃"><span class="sr-only">로그아웃</span></a>
                         </div>
                     </div>
                 </div>
@@ -114,6 +105,16 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="alert-area">
+                    <div class="badge-alert slim infomation">
+                        <i class="icon"></i>
+                        <span class="text">
+                            2025.07.16 임시저장한 평가지가 있습니다. <a href="#" class="badge-alert-link" title="임시저장 이동">이어서 진행하시겠습니까?</a>
+                        </span>
+                        <button class="close"><span class="sr-only">닫기</span></button>
+                    </div>
+                </div>
 
                 <div class="content-grid">
                     <!-- Left Content -->
@@ -124,26 +125,18 @@
                                 <div class="card-content">
                                     <div class="card-header">
                                         <div class="card-title">
-                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none">
-                                                <path d="M3.72492 0H16.4669C18.5211 0 20.1918 1.73513 20.1918 3.8745V17.1281C20.1918 19.2649 18.5237 21.0026 16.4669 21.0026H3.72492C1.67066 21.0026 0 19.2675 0 17.1281V3.8745C0 1.73513 1.66814 0 3.72492 0Z" fill="#FF6C61"/>
-                                                <path d="M14.5943 16.0808C14.5943 16.0808 14.5767 16.0808 14.5691 16.0808C14.2082 16.0729 13.87 15.9049 13.6353 15.6214L9.30473 10.3478C8.85299 9.79653 8.91356 8.96703 9.44353 8.49715C9.9735 8.02728 10.771 8.0929 11.2227 8.64153L14.6347 12.7943L21.8145 4.7539C22.289 4.22365 23.0864 4.19215 23.5987 4.68565C24.1085 5.17915 24.1388 6.00865 23.6643 6.54153L15.5205 15.6608C15.2808 15.9285 14.9476 16.0808 14.5968 16.0808H14.5943Z" fill="#FFB8B6"/>
-                                            </svg>
+                                            <i class="stats-icon icon1"></i>
                                             <span>평가 채점</span>
                                         </div>
                                         <div class="card-stats">
-                                            <span class="stats-label">대기중</span>
-                                            <div class="stats-number">
-                                                <span class="number">13</span>
+                                            <span class="card-box-label">대기중</span>
+                                            <div class="count-wrap">
+                                                <span class="count">13</span>
                                                 <span class="unit">건</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="action-btn">
-                                        채점하러가기
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path d="M8.41309 8.61035C8.73529 8.50652 9.13889 8.51125 9.46875 8.73437C10.0304 9.11449 10.4106 9.95588 9.9707 10.8486C9.84541 11.1028 9.60904 11.3965 9.29102 11.6689C9.45515 11.7763 9.60957 11.8438 9.75684 11.8838C10.028 11.9574 10.3055 11.9504 10.6152 11.8994C11.1876 11.8051 11.7064 11.4157 11.9209 11.0977C12.0287 10.9379 12.2528 10.9006 12.4219 11.0146C12.5909 11.1291 12.6409 11.3517 12.5332 11.5117C12.2232 11.9717 11.5469 12.475 10.7725 12.6025C10.4089 12.6624 10.0135 12.6822 9.59766 12.5693C9.2892 12.4855 8.98672 12.3321 8.68652 12.0928C8.61062 12.1363 8.53261 12.1786 8.45215 12.2178C7.69733 12.5851 6.71017 12.7619 5.63867 12.3555C5.4485 12.2833 5.34573 12.0765 5.40918 11.8936C5.4728 11.7106 5.67889 11.6202 5.86914 11.6924C6.70462 12.0093 7.48057 11.8799 8.10254 11.5771C8.11709 11.5701 8.13116 11.5619 8.14551 11.5547C7.51397 10.7701 7.39779 9.87511 7.63379 9.30078C7.77779 8.95062 8.0874 8.71533 8.41309 8.61035Z" fill="#0B78CB"/>
-                                        </svg>
-                                    </button>
+                                    <a href="#" class="action-btn">채점하러가기 <i class="icon"></i></a>
                                 </div>
                             </div>
 
@@ -151,16 +144,13 @@
                                 <div class="card-content">
                                     <div class="card-header">
                                         <div class="card-title">
-                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none">
-                                                <path d="M15.8047 1.83448H3.19525C1.43056 1.83448 0 3.2775 0 5.05757V17.7769C0 19.557 1.43056 21 3.19525 21H15.8047C17.5694 21 19 19.557 19 17.7769V5.05757C19 3.2775 17.5694 1.83448 15.8047 1.83448Z" fill="#33A3FF"/>
-                                                <path d="M12.8844 0H6.11782C5.53486 0 5.06227 0.476705 5.06227 1.06475V2.92363C5.06227 3.51168 5.53486 3.98838 6.11782 3.98838H12.8844C13.4673 3.98838 13.9399 3.51168 13.9399 2.92363V1.06475C13.9399 0.476705 13.4673 0 12.8844 0Z" fill="#6CC0EF"/>
-                                            </svg>
+                                            <i class="stats-icon icon2"></i>
                                             <span>최근 평가</span>
                                         </div>
                                         <div class="card-stats">
-                                            <span class="stats-label">완료</span>
-                                            <div class="stats-number">
-                                                <span class="number">3</span>
+                                            <span class="card-box-label">완료</span>
+                                            <div class="count-wrap">
+                                                <span class="count">3</span>
                                                 <span class="unit">건</span>
                                             </div>
                                         </div>
@@ -180,7 +170,7 @@
                                                 <span class="subject-highlight">국어</span> 평균
                                             </h3>
                                             <div class="average-info">
-                                                <span class="average-label">전체 평균 점수</span>
+                                                <span class="card-box-label">전체 평균 점수</span>
                                                 <div class="average-score">
                                                     <span class="score">48.67</span>
                                                     <span class="unit">점</span>
@@ -190,11 +180,7 @@
                                         <div class="class-comparison">
                                             <div class="comparison-item top-class">
                                                 <div class="comparison-header">
-                                                    <div class="arrow-icon up">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                            <path d="M12.0407 4.79775L18.0737 11.924H14.6604V19H9.41332V11.924H6L12.0407 4.79775Z" fill="#2098F3"/>
-                                                        </svg>
-                                                    </div>
+                                                    <i class="arrow-icon up"></i>
                                                     <span>상위 학급</span>
                                                 </div>
                                                 <div class="comparison-content">
@@ -204,11 +190,7 @@
                                             </div>
                                             <div class="comparison-item bottom-class">
                                                 <div class="comparison-header">
-                                                    <div class="arrow-icon down">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                            <path d="M12.0407 19.2022L18.0737 12.076H14.6604V5H9.41332V12.076H6L12.0407 19.2022Z" fill="#3FA654"/>
-                                                        </svg>
-                                                    </div>
+                                                    <i class="arrow-icon down"></i>
                                                     <span>하위 학급</span>
                                                 </div>
                                                 <div class="comparison-content">
@@ -224,7 +206,7 @@
 
                         <!-- Section 2 - Charts -->
                         <section class="section section-2">
-                            <div class="card-box chart-card">
+                            <div class="card-box chart-wrap chart-card">
                                 <div class="chart-header">
                                     <h3>회차별 학급 평균점수</h3>
                                     <div class="select-box">
@@ -233,52 +215,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="chart-content">
-                                    <div class="chart-placeholder">
-                                        <!-- Chart would be rendered here -->
-                                        <div class="chart-bars">
-                                            <div class="chart-row">
-                                                <span class="round-label">5회차<br><small>5단원 수와...</small></span>
-                                                <div class="bar-container">
-                                                    <div class="bar" style="width: 82%"></div>
-                                                    <span class="value">82</span>
-                                                </div>
-                                            </div>
-                                            <div class="chart-row">
-                                                <span class="round-label">4회차<br><small>4단원 변화...</small></span>
-                                                <div class="bar-container">
-                                                    <div class="bar" style="width: 76%"></div>
-                                                    <span class="value">76</span>
-                                                </div>
-                                            </div>
-                                            <div class="chart-row">
-                                                <span class="round-label">3회차<br><small>3단원 정비...</small></span>
-                                                <div class="bar-container">
-                                                    <div class="bar" style="width: 100%"></div>
-                                                    <span class="value">100</span>
-                                                </div>
-                                            </div>
-                                            <div class="chart-row">
-                                                <span class="round-label">2회차<br><small>2단원 삼각...</small></span>
-                                                <div class="bar-container">
-                                                    <div class="bar" style="width: 37%"></div>
-                                                    <span class="value">37</span>
-                                                </div>
-                                            </div>
-                                            <div class="chart-row">
-                                                <span class="round-label">1회차<br><small>1단원 자료...</small></span>
-                                                <div class="bar-container">
-                                                    <div class="bar" style="width: 67%"></div>
-                                                    <span class="value">67</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="chart-content average">
+                                    <canvas id="averageChart"></canvas>
                                 </div>
                             </div>
 
-                            <div class="card-box achievement-card">
-                                <div class="achievement-header">
+                            <div class="card-box chart-wrap">
+                                <div class="chart-header">
                                     <h3>학업 성취도율 변화</h3>
                                     <div class="select-box">
                                         <select class="select">
@@ -288,8 +231,8 @@
                                 </div>
                                 <div class="achievement-content">
                                     <div class="achievement-info">
-                                        <span class="student-count-label">총 응시학생수</span>
-                                        <div class="student-count">
+                                        <span class="card-box-label">총 응시학생수</span>
+                                        <div class="count-wrap">
                                             <span class="count">42</span>
                                             <span class="unit">명</span>
                                         </div>
@@ -303,24 +246,8 @@
                                         <div class="legend-item"><span class="color-dot orange"></span>6반</div>
                                     </div>
                                 </div>
-                                <div class="line-chart-placeholder">
-                                    <!-- Line chart would be rendered here -->
-                                    <svg width="100%" height="200" viewBox="0 0 400 200">
-                                        <!-- Grid lines -->
-                                        <defs>
-                                            <pattern id="grid" width="50" height="40" patternUnits="userSpaceOnUse">
-                                                <path d="M 50 0 L 0 0 0 40" fill="none" stroke="#E6E8EA" stroke-width="0.5"/>
-                                            </pattern>
-                                        </defs>
-                                        <rect width="100%" height="100%" fill="url(#grid)" />
-                                        
-                                        <!-- Sample line charts -->
-                                        <polyline fill="none" stroke="#FFCF33" stroke-width="2" points="20,180 80,160 140,164 200,138 260,125 320,105"/>
-                                        <polyline fill="none" stroke="#47A8F7" stroke-width="2" points="20,148 80,154 140,120 200,108 260,85 320,53"/>
-                                        <polyline fill="none" stroke="#FD9595" stroke-width="2" points="20,141 80,131 140,101 200,103 260,69 320,23"/>
-                                        <polyline fill="none" stroke="#7F81E8" stroke-width="2" points="20,162 80,144 140,148 200,122 260,109 320,89"/>
-                                        <polyline fill="none" stroke="#0DAFA6" stroke-width="2" points="20,101 80,107 140,75 200,63 260,40 320,8"/>
-                                    </svg>
+                                <div class="chart-content achievement">
+                                    <canvas id="achievementChart"></canvas>
                                 </div>
                             </div>
                         </section>
@@ -331,49 +258,54 @@
                                 <div class="materials-header">
                                     <div class="materials-intro">
                                         <div class="intro-icon">
-                                            <!-- Decorative icon would go here -->
+                                            <img src="/dashboard/images/shared-materials-img.svg">
                                         </div>
                                         <div class="intro-text">
-                                            <h3>우리 교실 평가자료,</h3>
-                                            <h3>같이 써요!</h3>
-                                        </div>
-                                        <div class="media-controls">
-                                            <button class="control-btn">▶</button>
-                                            <button class="control-btn">⏸</button>
-                                            <button class="control-btn">◀</button>
-                                            <button class="control-btn">▶</button>
+                                            <h3>우리 교실 평가자료, <span class="block">같이 써요! <a href="#" title="더보기" target="_self" class="more-btn"><span class="sr-only">공유자료 더보기</span></a></span></h3>
+                                            <div class="media-controls">
+                                                <button class="control-btn play"><span class="sr-only">시작</span></button>
+                                                <button class="control-btn pause on"><span class="sr-only">일시정지</span></button>
+                                                <button class="control-btn prev"><span class="sr-only">이전</span></button>
+                                                <button class="control-btn next"><span class="sr-only">다음</span></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="materials-list">
-                                    <div class="material-card">
-                                        <div class="card-date">2025-07-04</div>
+                                <div class="materials-list"> <!--material-card에 selecteds 지우기-->
+                                    <a class="material-card" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
-                                            <span>국어 1학년 1학기 단원평가지 말하기</span>
-                                            <span class="new-badge">N</span>
+                                            <em class="card-date">2025-07-04</em>
+                                            <div class="tit">
+                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span class="new-badge">N</span>
+                                            </div>
                                         </div>
                                         <div class="card-tags">
                                             <span class="tag grade">1학년</span>
                                             <span class="tag subject">말하기·쓰기</span>
                                             <span class="tag subject">읽기</span>
                                         </div>
-                                    </div>
-                                    <div class="material-card selected">
-                                        <div class="card-date">2025-07-04</div>
+                                    </a>
+                                    <a class="material-card selected" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
-                                            <span>국어 1학년 1학기 단원평가지 말하기</span>
-                                            <span class="new-badge">N</span>
+                                            <em class="card-date">2025-07-04</em>
+                                            <div class="tit">
+                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span class="new-badge">N</span>
+                                            </div>
                                         </div>
                                         <div class="card-tags">
                                             <span class="tag grade">1학년</span>
                                             <span class="tag subject">말하기·쓰기</span>
                                         </div>
-                                    </div>
-                                    <div class="material-card">
-                                        <div class="card-date">2025-07-04</div>
+                                    </a>
+                                    <a class="material-card" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
-                                            <span>국어 1학년 1학기 단원평가지 말하기</span>
-                                            <span class="new-badge">N</span>
+                                            <em class="card-date">2025-07-04</em>
+                                            <div class="tit">
+                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span class="new-badge">N</span>
+                                            </div>
                                         </div>
                                         <div class="card-tags">
                                             <span class="tag grade">1학년</span>
@@ -381,18 +313,20 @@
                                             <span class="tag subject">읽기</span>
                                             <span class="tag subject">문법</span>
                                         </div>
-                                    </div>
-                                    <div class="material-card">
-                                        <div class="card-date">2025-07-04</div>
+                                    </a>
+                                    <a class="material-card" href="#" title="국어 1학년 1학기 단원평가지 말하기 공유자료 보기" target="_self">
                                         <div class="card-title">
-                                            <span>국어 1학년 1학기 단원평가지 말하기</span>
-                                            <span class="new-badge">N</span>
+                                            <em class="card-date">2025-07-04</em>
+                                            <div class="tit">
+                                                <span>국어 1학년 1학기 단원평가지 말하기</span>
+                                                <span class="new-badge">N</span>
+                                            </div>
                                         </div>
                                         <div class="card-tags">
                                             <span class="tag grade">1학년</span>
                                             <span class="tag subject">말하기·쓰기</span>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </section>
@@ -411,52 +345,52 @@
                                     <span class="rankings-subtitle">최근 3개 평가지 기준</span>
                                 </div>
                                 <div class="rankings-list">
-                                    <div class="ranking-item">
+                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1920 문항 보기" target="_self"> 
                                         <div class="ranking-info">
                                             <span class="rank">1위</span>
                                             <span class="code">1-2-4-[9국04-03]-4-1920</span>
                                             <span class="description">[1국01-01] 말을 잘하자.</span>
                                         </div>
                                         <span class="percentage">66%</span>
-                                    </div>
-                                    <div class="ranking-item selected">
+                                    </a>
+                                    <a class="ranking-item selected" href="#" title="1-2-4-[9국04-03]-4-1921 문항 보기" target="_self"> <!--실제로는 selected 클래스 빼기 hover 디자인 보려고 쓴거에요.-->
                                         <div class="ranking-info">
                                             <span class="rank">2위</span>
                                             <span class="code">1-2-4-[9국04-03]-4-1921</span>
                                             <span class="description">[1국01-01] 말을 잘하자.</span>
                                         </div>
                                         <span class="percentage">64%</span>
-                                    </div>
-                                    <div class="ranking-item">
+                                    </a>
+                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1922 문항 보기" target="_self">
                                         <div class="ranking-info">
                                             <span class="rank">3위</span>
                                             <span class="code">1-2-4-[9국04-03]-4-1922</span>
                                             <span class="description">[1국01-01] 말을 잘하자.</span>
                                         </div>
                                         <span class="percentage">62%</span>
-                                    </div>
-                                    <div class="ranking-item">
+                                    </a>
+                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1923 문항 보기" target="_self">
                                         <div class="ranking-info">
                                             <span class="rank">4위</span>
                                             <span class="code">1-2-4-[9국04-03]-4-1923</span>
                                             <span class="description">[1국01-01] 말을 잘하자.</span>
                                         </div>
                                         <span class="percentage">60%</span>
-                                    </div>
-                                    <div class="ranking-item">
+                                    </a>
+                                    <a class="ranking-item" href="#" title="1-2-4-[9국04-03]-4-1924 문항 보기" target="_self">
                                         <div class="ranking-info">
                                             <span class="rank">5위</span>
                                             <span class="code">1-2-4-[9국04-03]-4-1924</span>
                                             <span class="description">[1국01-01] 말을 잘하자.</span>
                                         </div>
                                         <span class="percentage">58%</span>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="wrong-answer-notes">
                                 <div class="notes-header">
-                                    <h3>담당학급 오답노트</h3>
+                                    <h3>담당학급 오답노트 <a href="#" title="더보기" target="_self" class="more-btn"><span class="sr-only">더보기</span></a></h3>
                                     <select class="select trans">
                                         <option selected>전체</option>
                                         <option>1학년</option>
@@ -465,36 +399,36 @@
                                     </select>
                                 </div>
                                 <div class="notes-grid">
-                                    <div class="note-card blue">
+                                    <a class="note-card blue" href="#" title="1학년 1반 오답노트 보기" target="_self">
                                         <div class="note-header">1학년 1반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">2</div>
-                                    </div>
-                                    <div class="note-card red selceted">
+                                    </a>
+                                    <a class="note-card red selceted" href="#" title="1학년 2반 오답노트 보기" target="_self"> <!--실제로는 selceted 클래스 빼기, hover 디자인 보려고 쓴거에요.-->
                                         <div class="note-header">1학년 2반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">1</div>
-                                    </div>
-                                    <div class="note-card light-blue">
+                                    </a>
+                                    <a class="note-card light-blue" href="#" title="1학년 3반 오답노트 보기" target="_self">
                                         <div class="note-header">1학년 3반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">1</div>
-                                    </div>
-                                    <div class="note-card green">
+                                    </a>
+                                    <a class="note-card green" href="#" title="1학년 4반 오답노트 보기" target="_self">
                                         <div class="note-header">1학년 4반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">0</div>
-                                    </div>
-                                    <div class="note-card yellow">
+                                    </a>
+                                    <a class="note-card yellow" href="#" title="1학년 5반 오답노트 보기" target="_self">
                                         <div class="note-header">1학년 5반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">0</div>
-                                    </div>
-                                    <div class="note-card purple">
+                                    </a>
+                                    <a class="note-card purple" href="#" title="1학년 6반 오답노트 보기" target="_self">
                                         <div class="note-header">1학년 6반</div>
                                         <div class="note-arrow">→</div>
                                         <div class="note-count">0</div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="carousel-dots">
                                     <span class="dot active"></span>
@@ -509,30 +443,20 @@
                             <div class="banner orange">
                                 <div class="banner-content">
                                     <div class="banner-text">
-                                        <span class="banner-intro">신규 이용 선생님을 위한</span>
-                                        <span class="banner-helper">도우미</span>
+                                        <img src="/dashboard/images/banner-title-img1.svg" alt="신규 이용 선생님을 위한 도우미">
                                     </div>
                                     <h4 class="banner-title">온평가 사용자 매뉴얼 다운로드</h4>
                                 </div>
-                                <button class="banner-btn">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M20.7002 12.6797C21.2522 12.68 21.7001 13.1276 21.7002 13.6797V18.7197C21.7002 19.2015 21.4928 19.6473 21.1523 19.9629C20.8144 20.2758 20.3703 20.4393 19.9229 20.4395H4.37793C3.93034 20.4395 3.48655 20.276 3.14844 19.9629C2.80773 19.6473 2.6006 19.2017 2.60059 18.7197V13.6797C2.60068 13.1275 3.04836 12.6797 3.60059 12.6797C4.15259 12.68 4.60049 13.1276 4.60059 13.6797V18.4395H19.7002V13.6797C19.7003 13.1276 20.1482 12.6799 20.7002 12.6797ZM12.1504 2.59961C12.7023 2.59987 13.1502 3.04766 13.1504 3.59961V11.2461L15.7139 8.65723C16.1022 8.26478 16.7353 8.26129 17.1279 8.64941C17.5205 9.03785 17.5241 9.6709 17.1357 10.0635L12.8604 14.3838C12.8062 14.4384 12.7457 14.485 12.6816 14.5254C12.6396 14.5519 12.5958 14.5756 12.5498 14.5957C12.4249 14.6504 12.2894 14.6806 12.1504 14.6807C12.0826 14.6807 12.0156 14.6736 11.9502 14.6602C11.9406 14.6582 11.9314 14.6546 11.9219 14.6523C11.8678 14.6396 11.8147 14.624 11.7637 14.6025C11.6414 14.5513 11.5314 14.4766 11.4395 14.3838L7.16406 10.0635C6.77585 9.6709 6.77943 9.03781 7.17188 8.64941C7.56444 8.26116 8.19753 8.26478 8.58594 8.65723L11.1504 11.248V3.59961C11.1506 3.04749 11.5982 2.59961 12.1504 2.59961Z" fill="white"/>
-                                    </svg>
-                                </button>
+                                <a class="banner-btn" href="#" title="다운로드"><span class="sr-only">다운로드</span></a>
                             </div>
                             <div class="banner blue">
                                 <div class="banner-content">
                                     <div class="banner-text">
-                                        <span class="banner-intro">신규 이용 선생님을 위한</span>
-                                        <span class="banner-tip">TIP</span>
+                                        <img src="/dashboard/images/banner-title-img2.svg" alt="신규 이용 선생님을 위한 TIP">
                                     </div>
                                     <h4 class="banner-title">단원별 평가지 샘플 사용해보기</h4>
                                 </div>
-                                <button class="banner-btn">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M11.7864 4.92871C12.177 4.53847 12.81 4.5383 13.2005 4.92871L19.5647 11.293C19.9549 11.6834 19.9549 12.3166 19.5647 12.707L13.2005 19.0713C12.81 19.4617 12.177 19.4615 11.7864 19.0713C11.3959 18.6808 11.3959 18.0478 11.7864 17.6572L16.4427 13H5.14286C4.59057 13 4.14286 12.5523 4.14286 12C4.14286 11.4477 4.59057 11 5.14286 11H16.4427L11.7864 6.34277C11.3959 5.95225 11.3959 5.31923 11.7864 4.92871Z" fill="white"/>
-                                    </svg>
-                                </button>
+                                <a class="banner-btn" href="#" title="바로가기"><span class="sr-only">바로가기</span></a>
                             </div>
                         </section>
                     </div>
@@ -561,14 +485,20 @@
                             </select>
                         </div>
                     </div>
-                    <button class="scroll-top">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M8.25286 4.29372L13.2599 10.1159C13.4458 10.332 13.2922 10.6665 13.0072 10.6665L2.99218 10.6665C2.70712 10.6665 2.55359 10.332 2.73947 10.1158L7.74743 4.2937C7.88043 4.13907 8.11987 4.13908 8.25286 4.29372Z" fill="#464C53"/>
-                        </svg>
-                    </button>
                 </div>
             </footer>
         </div>
+
+        <div class="floating">
+            <a href="#dashboard" class="scroll-top">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8.25286 4.29372L13.2599 10.1159C13.4458 10.332 13.2922 10.6665 13.0072 10.6665L2.99218 10.6665C2.70712 10.6665 2.55359 10.332 2.73947 10.1158L7.74743 4.2937C7.88043 4.13907 8.11987 4.13908 8.25286 4.29372Z" fill="#464C53"/>
+                </svg>
+            </a>
+        </div>
     </div>
+
+
+    <script type="text/javascript" src="/dashboard/js/dashboard_contents.js"></script>
 </body>
 </html>
