@@ -223,7 +223,8 @@ textarea:disabled {background-color:var(--gray_10);}
 .question * {margin:0;padding:0;box-sizing:border-box;-webkit-touch-callout:none;font-size:clamp(16px, .9vw, 1.0625rem);font-weight:400;}
 .question img {vertical-align:middle;}
 /* question body :: 문항 영역 layout */
-.q_layout {display:flex;flex-direction:column;gap:1.25rem;padding:clamp(2rem,3vw,3rem);background:#fff;}/*flex:1 1 auto;min-height:0;overflow-y:auto;*/
+.q_layout {display:flex;flex-direction:column;gap:1.25rem;padding:clamp(2rem,3vw,3rem);background:#fff;}
+.q_layout.scroll {flex:1 1 auto;min-height:0;overflow-y:auto;}
 .q_layout p {font-size:clamp(16px, .9vw, 1.0625rem);line-height:1.5;}
 /* 문항 질문 */
 .q_tit {margin:0;padding:1.25rem 2.25rem;background:var(--bluegray_5);}
