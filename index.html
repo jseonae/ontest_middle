@@ -19,10 +19,12 @@
     <div class="wrap">
         <a class="btn signBtn" href="/account/agreement.html">회원가입</a>
         <div class="mcon">
+
+            <div class="logo-wrap"><img src="../images/main/logo_main.svg" alt="온평가 로고"></div>
+
             <h1 class="title">
-                <span>출발선이 평등한 행복한 충남교육</span>
-                <span><em>컴퓨터 기반</em> 평가 문제은행</span>
-                <img src="../images/main/logo_main.svg" alt="온평가 로고">
+                <span><em>컴퓨터 기반</em>온라인 문제은행</span>
+                <span>수업과 평가를 하나로 잇는 도구로 학습 이해도를 정밀하게 <span class="block">진단하고 관리할 수 있습니다.</span></span>
             </h1>
             <ul class="btn_group">
                 <li>
@@ -45,37 +47,18 @@
         </div>
 
         <div class="obj_group">
-            <span id="lottie2" class="lottie mobj02"></span>
             <span id="lottie1" class="lottie mobj01"></span>
-            <span class="obj num1"></span>
-            <span class="obj num2"></span>
-            <span class="obj num3"></span>
-            <span class="obj num5"></span>
-            <span class="obj num6">
-                <i class="shape num1"></i>
-                <i class="shape num2"></i>
-                <i class="shape num3"></i>
-            </span>
-            <span class="obj num7"></span>
-            <span class="obj num8"></span>
-            <span class="obj num9"></span>
-            <span class="obj num10"></span>
-            <span class="obj objBg"></span>
         </div>
     </div>
 
-    <div class="bg_group">
-        <span class="purple num1"></span>
-        <span class="purple num2"></span>
-        <span class="wave num1"></span>
-        <span class="wave num2"></span>
-    </div>
+    <footer>
+        <img src="../images/main/cne_logo.svg" alt="충청남도교육청교육과정평가정보원 로고">
+        <span>Copyright ⓒ 2024 edus충남. All Rights Reserved.</span>
+    </footer>
+
 </main>
 
-<footer>
-    <img src="../images/main/cne_logo.svg" alt="충청남도교육청교육과정평가정보원 로고">
-    <span>Copyright ⓒ 2024 edus충남. All Rights Reserved.</span>
-</footer>
+
 
 <!--선생님 로그인 팝업-->
 <div class="modal modal-popup main_modal" id="popup_teacher">
@@ -163,18 +146,9 @@
 
 
 <script>
-    //남학생
     var animation1 = bodymovin.loadAnimation({ 
         container: document.getElementById('lottie1'),
-        path: '/images/main/mobj01.json',
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-    });
-    //여학생
-    var animation2 = bodymovin.loadAnimation({ 
-        container: document.getElementById('lottie2'),
-        path: '/images/main/mobj02.json',
+        path: '/images/main/main-trans-lottie.json',
         renderer: 'svg',
         loop: true,
         autoplay: true,
